@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.android.extrainputmethod.latin"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    aaptOptions {
+        noCompress ".dict"
+    }
+
+    dependencies {
+        compile 'com.android.support:support-v4:22.1.0'
+        compile fileTree(dir: 'libs', include: '*.jar')
+    }
+}
