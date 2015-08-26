@@ -2246,6 +2246,41 @@ public final class KeyboardTextsTable {
         /* morekeys_cyrillic_a */ "\u04D9",
     };
 
+    /* Locale udm: Udmurt*/
+    private static final String[] TEXTS_udm = {
+        /* morekeys_a ~ */
+            null, null, null, null,
+        /* ~ morekeys_e */
+            // Label for "switch to alphabetic" key.
+            // U+0410: "А" CYRILLIC CAPITAL LETTER A
+            // U+0411: "Б" CYRILLIC CAPITAL LETTER BE
+            // U+0412: "В" CYRILLIC CAPITAL LETTER VE
+        /* keylabel_to_alpha */ "\u0410\u0411\u0412",
+        /* morekeys_i */ null,
+        /* double_quotes */ "!text/double_9qm_lqm",
+        /* morekeys_n */ null,
+        /* morekeys_c */ null,
+        /* single_quotes */ "!text/single_9qm_lqm",
+        /* morekeys_s ~ */
+            null, null, null, null, null, null, null, null, null, null, null, null,
+        /* ~ morekeys_k */
+            // U+0451: "ё" CYRILLIC SMALL LETTER IO
+        /* morekeys_cyrillic_ie */ "\u0451",
+        /* keyspec_nordic_row1_11 ~ */
+            null, null, null, null,
+        /* ~ morekeys_nordic_row2_10 */
+            // U+0449: "щ" CYRILLIC SMALL LETTER SHCHA
+        /* keyspec_east_slavic_row1_9 */ "\u0449",
+            // U+044B: "ы" CYRILLIC SMALL LETTER YERU
+        /* keyspec_east_slavic_row2_2 */ "\u044B",
+            // U+044D: "э" CYRILLIC SMALL LETTER E
+        /* keyspec_east_slavic_row2_11 */ "\u044D",
+            // U+0438: "и" CYRILLIC SMALL LETTER I
+        /* keyspec_east_slavic_row3_5 */ "\u0438",
+            // U+044A: "ъ" CYRILLIC SMALL LETTER HARD SIGN
+        /* morekeys_cyrillic_soft_sign */ "\u044A",
+    };
+
     /* Locale km_KH: Khmer (Cambodia) */
     private static final String[] TEXTS_km_KH = {
         /* morekeys_a ~ */
@@ -4017,6 +4052,7 @@ public final class KeyboardTextsTable {
         "th"     , TEXTS_th,    /*   2/ 12 Thai */
         "tl"     , TEXTS_tl,    /*   7/  9 Tagalog */
         "tr"     , TEXTS_tr,    /*   7/ 20 Turkish */
+        "udm"    , TEXTS_udm,    /*  11/ 88 Ukrainian */
         "uk"     , TEXTS_uk,    /*  11/ 88 Ukrainian */
         "vi"     , TEXTS_vi,    /*   8/ 14 Vietnamese */
         "zu"     , TEXTS_zu,    /*   8/ 11 Zulu */

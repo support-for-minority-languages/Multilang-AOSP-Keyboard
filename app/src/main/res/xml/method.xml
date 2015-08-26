@@ -616,6 +616,13 @@
             android:imeSubtypeExtraValue="SupportTouchPositionCorrection,EmojiCapable"
             android:isAsciiCapable="false"
     />
+    <subtype android:icon="@drawable/ic_ime_switcher_dark"
+            android:label="@string/keyboard_name_udm"
+            android:imeSubtypeLocale="udm"
+            android:imeSubtypeMode="keyboard"
+            android:imeSubtypeExtraValue="KeyboardLayoutSet=udmurt,SupportTouchPositionCorrection,EmojiCapable"
+            android:isAsciiCapable="false"
+    />
     <!-- TODO: This Sinhala keyboard is a preliminary layout.
                This isn't based on the final specification. -->
     <!--
