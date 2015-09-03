@@ -74,7 +74,7 @@
     <Key
         latin:keySpec="&#x0437;"
         latin:keyHintLabel="0"
-        latin:additionalMoreKeys="0,ӟ" />
+        latin:additionalMoreKeys="0" />
     <!-- U+0445: "х" CYRILLIC SMALL LETTER HA -->
     <Key
         latin:keySpec="&#x0445;" />
