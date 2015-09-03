@@ -27,7 +27,6 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 
-import com.android.extrainputmethod.dictionarypack.DictionarySettingsActivity;
 import com.android.extrainputmethod.latin.R;
 import com.android.extrainputmethod.latin.userdictionary.UserDictionaryList;
 import com.android.extrainputmethod.latin.userdictionary.UserDictionarySettings;
@@ -62,12 +61,15 @@ public final class CorrectionSettingsFragment extends SubScreenFragment {
         final PackageManager pm = context.getPackageManager();
 
         ensureConsistencyOfAutoCorrectionSettings();
-
+        /*
+         *  We are not yet supporting dictionary download.
         final Preference dictionaryLink = findPreference(Settings.PREF_CONFIGURE_DICTIONARIES_KEY);
         final Intent intent = dictionaryLink.getIntent();
         intent.setClassName(context.getPackageName(), DictionarySettingsActivity.class.getName());
         final int number = pm.queryIntentActivities(intent, 0).size();
         if (0 >= number) {
+        */
+        if (true) {
             removePreference(Settings.PREF_CONFIGURE_DICTIONARIES_KEY);
         }
 
