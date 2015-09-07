@@ -18,5 +18,5 @@
 */
 -->
 <resources>
-    <bool name="config_setup_wizard_available">false</bool>
+    <bool name="config_setup_wizard_available">true</bool>
 </resources>

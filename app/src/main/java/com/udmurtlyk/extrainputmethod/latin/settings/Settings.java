@@ -25,14 +25,15 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.udmurtlyk.extrainputmethod.compat.BuildCompatUtils;
-import com.udmurtlyk.extrainputmethod.latin.AudioAndHapticFeedbackManager;
-import com.udmurtlyk.extrainputmethod.latin.InputAttributes;
 import com.android.inputmethod.latin.utils.AdditionalSubtypeUtils;
+import com.android.inputmethod.latin.utils.JniUtils;
 import com.android.inputmethod.latin.utils.ResourceUtils;
 import com.android.inputmethod.latin.utils.RunInLocale;
 import com.android.inputmethod.latin.utils.StringUtils;
-import com.android.inputmethod.latin.utils.JniUtils;
+import com.udmurtlyk.extrainputmethod.compat.BuildCompatUtils;
+import com.udmurtlyk.extrainputmethod.latin.AudioAndHapticFeedbackManager;
+import com.udmurtlyk.extrainputmethod.latin.InputAttributes;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
 import java.util.Collections;
 import java.util.Locale;
@@ -364,7 +365,7 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
     public static boolean readShowSetupWizardIcon(final SharedPreferences prefs,
             final Context context) {
         final boolean enableSetupWizardByConfig = context.getResources().getBoolean(
-                com.udmurtlyk.extrainputmethod.latin.R.bool.config_setup_wizard_available);
+                R.bool.config_setup_wizard_available);
         if (!enableSetupWizardByConfig) {
             return false;
         }
