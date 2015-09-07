@@ -291,7 +291,7 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
     public static String readPrefAdditionalSubtypes(final SharedPreferences prefs,
             final Resources res) {
         final String predefinedPrefSubtypes = AdditionalSubtypeUtils.createPrefSubtypes(
-                res.getStringArray(com.udmurtlyk.extrainputmethod.latin.R.array.predefined_subtypes));
+                res.getStringArray(R.array.predefined_subtypes));
         return prefs.getString(PREF_CUSTOM_INPUT_STYLES, predefinedPrefSubtypes);
     }
 

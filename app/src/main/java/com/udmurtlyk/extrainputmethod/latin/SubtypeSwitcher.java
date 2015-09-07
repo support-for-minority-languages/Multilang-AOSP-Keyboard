@@ -16,8 +16,6 @@
 
 package com.udmurtlyk.extrainputmethod.latin;
 
-import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.REQ_NETWORK_CONNECTIVITY;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -31,19 +29,21 @@ import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
 
-import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
-import com.udmurtlyk.extrainputmethod.compat.InputMethodSubtypeCompatUtils;
 import com.android.inputmethod.keyboard.KeyboardSwitcher;
 import com.android.inputmethod.keyboard.internal.LanguageOnSpacebarHelper;
-import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
 import com.android.inputmethod.latin.utils.LocaleUtils;
 import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.compat.InputMethodSubtypeCompatUtils;
+import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.REQ_NETWORK_CONNECTIVITY;
 
 public final class SubtypeSwitcher {
     private static boolean DBG = DebugFlags.DEBUG_ENABLED;

@@ -30,6 +30,16 @@ import android.view.inputmethod.InputMethodSubtype;
 import com.android.inputmethod.keyboard.internal.KeyboardBuilder;
 import com.android.inputmethod.keyboard.internal.KeyboardParams;
 import com.android.inputmethod.keyboard.internal.KeysCache;
+import com.android.inputmethod.latin.utils.InputTypeUtils;
+import com.android.inputmethod.latin.utils.ScriptUtils;
+import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
+import com.android.inputmethod.latin.utils.XmlParseUtils;
+import com.udmurtlyk.extrainputmethod.compat.EditorInfoCompatUtils;
+import com.udmurtlyk.extrainputmethod.compat.InputMethodSubtypeCompatUtils;
+import com.udmurtlyk.extrainputmethod.latin.InputAttributes;
+import com.udmurtlyk.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.SubtypeSwitcher;
+import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -37,17 +47,6 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.lang.ref.SoftReference;
 import java.util.HashMap;
-
-import com.udmurtlyk.extrainputmethod.compat.EditorInfoCompatUtils;
-import com.udmurtlyk.extrainputmethod.compat.InputMethodSubtypeCompatUtils;
-import com.udmurtlyk.extrainputmethod.latin.InputAttributes;
-import com.udmurtlyk.extrainputmethod.latin.R;
-import com.udmurtlyk.extrainputmethod.latin.SubtypeSwitcher;
-import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
-import com.android.inputmethod.latin.utils.InputTypeUtils;
-import com.android.inputmethod.latin.utils.ScriptUtils;
-import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
-import com.android.inputmethod.latin.utils.XmlParseUtils;
 
 import static com.udmurtlyk.extrainputmethod.latin.Constants.ImeOption.FORCE_ASCII;
 import static com.udmurtlyk.extrainputmethod.latin.Constants.ImeOption.NO_SETTINGS_KEY;
