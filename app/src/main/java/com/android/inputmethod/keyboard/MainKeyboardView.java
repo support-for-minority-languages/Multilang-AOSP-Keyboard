@@ -49,19 +49,18 @@ import com.android.inputmethod.keyboard.internal.MoreKeySpec;
 import com.android.inputmethod.keyboard.internal.NonDistinctMultitouchHelper;
 import com.android.inputmethod.keyboard.internal.SlidingKeyInputDrawingPreview;
 import com.android.inputmethod.keyboard.internal.TimerHandler;
-
-import java.util.WeakHashMap;
-
-import com.android.extrainputmethod.accessibility.AccessibilityUtils;
-import com.android.extrainputmethod.accessibility.MainKeyboardAccessibilityDelegate;
-import com.android.extrainputmethod.annotations.ExternallyReferenced;
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
-import com.android.extrainputmethod.latin.SuggestedWords;
-import com.android.extrainputmethod.latin.settings.DebugSettings;
 import com.android.inputmethod.latin.utils.CoordinateUtils;
 import com.android.inputmethod.latin.utils.SpacebarLanguageUtils;
 import com.android.inputmethod.latin.utils.TypefaceUtils;
+import com.udmurtlyk.extrainputmethod.accessibility.AccessibilityUtils;
+import com.udmurtlyk.extrainputmethod.accessibility.MainKeyboardAccessibilityDelegate;
+import com.udmurtlyk.extrainputmethod.annotations.ExternallyReferenced;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.SuggestedWords;
+import com.udmurtlyk.extrainputmethod.latin.settings.DebugSettings;
+
+import java.util.WeakHashMap;
 
 /**
  * A view that is responsible for detecting key presses and touch movements.

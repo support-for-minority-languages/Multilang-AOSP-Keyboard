@@ -22,10 +22,10 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-import com.android.extrainputmethod.latin.Dictionary;
-import com.android.extrainputmethod.latin.SuggestedWords.SuggestedWordInfo;
-import com.android.extrainputmethod.latin.WordComposer;
-import com.android.extrainputmethod.latin.settings.SettingsValuesForSuggestion;
+import com.udmurtlyk.extrainputmethod.latin.Dictionary;
+import com.udmurtlyk.extrainputmethod.latin.WordComposer;
+import com.udmurtlyk.extrainputmethod.latin.settings.SettingsValuesForSuggestion;
+import com.udmurtlyk.extrainputmethod.latin.SuggestedWords;
 
 /**
  * This class provides binary dictionary reading operations with locking. An instance of this class
@@ -53,7 +53,7 @@ public final class ReadOnlyBinaryDictionary extends Dictionary {
     }
 
     @Override
-    public ArrayList<SuggestedWordInfo> getSuggestions(final WordComposer composer,
+    public ArrayList<SuggestedWords.SuggestedWordInfo> getSuggestions(final WordComposer composer,
             final PrevWordsInfo prevWordsInfo, final ProximityInfo proximityInfo,
             final SettingsValuesForSuggestion settingsValuesForSuggestion,
             final int sessionId, final float[] inOutLanguageWeight) {
@@ -81,7 +81,7 @@ public final class ReadOnlyBinaryDictionary extends Dictionary {
     }
 
     @Override
-    public boolean shouldAutoCommit(final SuggestedWordInfo candidate) {
+    public boolean shouldAutoCommit(final SuggestedWords.SuggestedWordInfo candidate) {
         if (mLock.readLock().tryLock()) {
             try {
                 return mBinaryDictionary.shouldAutoCommit(candidate);

@@ -23,7 +23,6 @@ import android.graphics.Path;
 
 import com.android.inputmethod.keyboard.PointerTracker;
 
-import com.android.extrainputmethod.latin.R;
 import com.android.inputmethod.latin.utils.CoordinateUtils;
 
 /**
@@ -47,16 +46,16 @@ public final class SlidingKeyInputDrawingPreview extends AbstractDrawingPreview 
 
     public SlidingKeyInputDrawingPreview(final TypedArray mainKeyboardViewAttr) {
         final int previewColor = mainKeyboardViewAttr.getColor(
-                R.styleable.MainKeyboardView_slidingKeyInputPreviewColor, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_slidingKeyInputPreviewColor, 0);
         final float previewRadius = mainKeyboardViewAttr.getDimension(
-                R.styleable.MainKeyboardView_slidingKeyInputPreviewWidth, 0) / 2.0f;
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_slidingKeyInputPreviewWidth, 0) / 2.0f;
         final int PERCENTAGE_INT = 100;
         final float previewBodyRatio = (float)mainKeyboardViewAttr.getInt(
-                R.styleable.MainKeyboardView_slidingKeyInputPreviewBodyRatio, PERCENTAGE_INT)
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_slidingKeyInputPreviewBodyRatio, PERCENTAGE_INT)
                 / (float)PERCENTAGE_INT;
         mPreviewBodyRadius = previewRadius * previewBodyRatio;
         final int previewShadowRatioInt = mainKeyboardViewAttr.getInt(
-                R.styleable.MainKeyboardView_slidingKeyInputPreviewShadowRatio, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_slidingKeyInputPreviewShadowRatio, 0);
         if (previewShadowRatioInt > 0) {
             final float previewShadowRatio = (float)previewShadowRatioInt / (float)PERCENTAGE_INT;
             final float shadowRadius = previewRadius * previewShadowRatio;

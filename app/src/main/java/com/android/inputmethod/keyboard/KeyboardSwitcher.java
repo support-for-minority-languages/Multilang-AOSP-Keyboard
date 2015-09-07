@@ -31,15 +31,15 @@ import com.android.inputmethod.keyboard.emoji.EmojiPalettesView;
 import com.android.inputmethod.keyboard.internal.KeyboardState;
 import com.android.inputmethod.keyboard.internal.KeyboardTextsSet;
 
-import com.android.extrainputmethod.compat.InputMethodServiceCompatUtils;
-import com.android.extrainputmethod.latin.InputView;
-import com.android.extrainputmethod.latin.LatinIME;
-import com.android.extrainputmethod.latin.R;
-import com.android.extrainputmethod.latin.RichInputMethodManager;
-import com.android.extrainputmethod.latin.SubtypeSwitcher;
-import com.android.extrainputmethod.latin.WordComposer;
-import com.android.extrainputmethod.latin.settings.Settings;
-import com.android.extrainputmethod.latin.settings.SettingsValues;
+import com.udmurtlyk.extrainputmethod.compat.InputMethodServiceCompatUtils;
+import com.udmurtlyk.extrainputmethod.latin.InputView;
+import com.udmurtlyk.extrainputmethod.latin.LatinIME;
+import com.udmurtlyk.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.RichInputMethodManager;
+import com.udmurtlyk.extrainputmethod.latin.SubtypeSwitcher;
+import com.udmurtlyk.extrainputmethod.latin.WordComposer;
+import com.udmurtlyk.extrainputmethod.latin.settings.Settings;
+import com.udmurtlyk.extrainputmethod.latin.settings.SettingsValues;
 import com.android.inputmethod.latin.utils.ResourceUtils;
 import com.android.inputmethod.latin.utils.ScriptUtils;
 

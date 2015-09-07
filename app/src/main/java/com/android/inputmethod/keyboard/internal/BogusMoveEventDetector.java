@@ -20,9 +20,9 @@ import android.content.res.Resources;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
-import com.android.extrainputmethod.latin.define.DebugFlags;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
 
 // This hack is applied to certain classes of tablets.
 public final class BogusMoveEventDetector {

@@ -38,8 +38,8 @@ import com.android.inputmethod.keyboard.internal.KeyVisualAttributes;
 
 import java.util.HashSet;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.R;
 import com.android.inputmethod.latin.utils.TypefaceUtils;
 
 /**

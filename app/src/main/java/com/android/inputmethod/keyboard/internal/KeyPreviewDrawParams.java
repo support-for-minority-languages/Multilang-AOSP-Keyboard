@@ -25,8 +25,6 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 
-import com.android.extrainputmethod.latin.R;
-
 public final class KeyPreviewDrawParams {
     // XML attributes of {@link MainKeyboardView}.
     public final int mPreviewOffset;
@@ -71,17 +69,17 @@ public final class KeyPreviewDrawParams {
 
     public KeyPreviewDrawParams(final TypedArray mainKeyboardViewAttr) {
         mPreviewOffset = mainKeyboardViewAttr.getDimensionPixelOffset(
-                R.styleable.MainKeyboardView_keyPreviewOffset, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_keyPreviewOffset, 0);
         mPreviewHeight = mainKeyboardViewAttr.getDimensionPixelSize(
-                R.styleable.MainKeyboardView_keyPreviewHeight, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_keyPreviewHeight, 0);
         mPreviewBackgroundResId = mainKeyboardViewAttr.getResourceId(
-                R.styleable.MainKeyboardView_keyPreviewBackground, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_keyPreviewBackground, 0);
         mLingerTimeout = mainKeyboardViewAttr.getInt(
-                R.styleable.MainKeyboardView_keyPreviewLingerTimeout, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_keyPreviewLingerTimeout, 0);
         mShowUpAnimatorResId = mainKeyboardViewAttr.getResourceId(
-                R.styleable.MainKeyboardView_keyPreviewShowUpAnimator, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_keyPreviewShowUpAnimator, 0);
         mDismissAnimatorResId = mainKeyboardViewAttr.getResourceId(
-                R.styleable.MainKeyboardView_keyPreviewDismissAnimator, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_keyPreviewDismissAnimator, 0);
     }
 
     public void setVisibleOffset(final int previewVisibleOffset) {

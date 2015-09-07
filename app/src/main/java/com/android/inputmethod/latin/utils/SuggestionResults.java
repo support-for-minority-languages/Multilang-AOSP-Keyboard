@@ -22,16 +22,16 @@ import java.util.Comparator;
 import java.util.Locale;
 import java.util.TreeSet;
 
-import com.android.extrainputmethod.latin.SuggestedWords.SuggestedWordInfo;
-import com.android.extrainputmethod.latin.define.ProductionFlags;
+import com.udmurtlyk.extrainputmethod.latin.define.ProductionFlags;
+import com.udmurtlyk.extrainputmethod.latin.SuggestedWords;
 
 /**
  * A TreeSet of SuggestedWordInfo that is bounded in size and throws everything that's smaller
  * than its limit
  */
-public final class SuggestionResults extends TreeSet<SuggestedWordInfo> {
+public final class SuggestionResults extends TreeSet<SuggestedWords.SuggestedWordInfo> {
     public final Locale mLocale;
-    public final ArrayList<SuggestedWordInfo> mRawSuggestions;
+    public final ArrayList<SuggestedWords.SuggestedWordInfo> mRawSuggestions;
     // TODO: Instead of a boolean , we may want to include the context of this suggestion results,
     // such as {@link PrevWordsInfo}.
     public final boolean mIsBeginningOfSentence;
@@ -42,7 +42,7 @@ public final class SuggestionResults extends TreeSet<SuggestedWordInfo> {
         this(locale, sSuggestedWordInfoComparator, capacity, isBeginningOfSentence);
     }
 
-    private SuggestionResults(final Locale locale, final Comparator<SuggestedWordInfo> comparator,
+    private SuggestionResults(final Locale locale, final Comparator<SuggestedWords.SuggestedWordInfo> comparator,
             final int capacity, final boolean isBeginningOfSentence) {
         super(comparator);
         mLocale = locale;
@@ -56,7 +56,7 @@ public final class SuggestionResults extends TreeSet<SuggestedWordInfo> {
     }
 
     @Override
-    public boolean add(final SuggestedWordInfo e) {
+    public boolean add(final SuggestedWords.SuggestedWordInfo e) {
         if (size() < mCapacity) return super.add(e);
         if (comparator().compare(e, last()) > 0) return false;
         super.add(e);
@@ -65,17 +65,17 @@ public final class SuggestionResults extends TreeSet<SuggestedWordInfo> {
     }
 
     @Override
-    public boolean addAll(final Collection<? extends SuggestedWordInfo> e) {
+    public boolean addAll(final Collection<? extends SuggestedWords.SuggestedWordInfo> e) {
         if (null == e) return false;
         return super.addAll(e);
     }
 
     private static final class SuggestedWordInfoComparator
-            implements Comparator<SuggestedWordInfo> {
+            implements Comparator<SuggestedWords.SuggestedWordInfo> {
         // This comparator ranks the word info with the higher frequency first. That's because
         // that's the order we want our elements in.
         @Override
-        public int compare(final SuggestedWordInfo o1, final SuggestedWordInfo o2) {
+        public int compare(final SuggestedWords.SuggestedWordInfo o1, final SuggestedWords.SuggestedWordInfo o2) {
             if (o1.mScore > o2.mScore) return -1;
             if (o1.mScore < o2.mScore) return 1;
             if (o1.mCodePointCount < o2.mCodePointCount) return -1;

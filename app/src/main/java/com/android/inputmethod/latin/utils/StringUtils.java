@@ -25,10 +25,10 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 
-import static com.android.extrainputmethod.latin.Constants.CODE_UNSPECIFIED;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.CODE_UNSPECIFIED;
 
 public final class StringUtils {
     public static final int CAPITALIZE_NONE = 0;  // No caps, or mixed case

@@ -23,7 +23,7 @@ import com.android.inputmethod.latin.PrevWordsInfo;
 import java.util.List;
 import java.util.Locale;
 
-import com.android.extrainputmethod.latin.Dictionary;
+import com.udmurtlyk.extrainputmethod.latin.Dictionary;
 
 public class DistracterFilterCheckingIsInDictionary implements DistracterFilter {
     private final DistracterFilter mDistracterFilter;

@@ -20,7 +20,7 @@ import com.android.inputmethod.latin.BinaryDictionary;
 
 import java.util.Arrays;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
 import com.android.inputmethod.latin.utils.CombinedFormatUtils;
 
 public final class ProbabilityInfo {

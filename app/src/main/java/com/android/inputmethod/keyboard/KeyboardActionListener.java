@@ -16,8 +16,8 @@
 
 package com.android.inputmethod.keyboard;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.InputPointers;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.InputPointers;
 
 public interface KeyboardActionListener {
     /**

@@ -18,7 +18,7 @@ package com.android.inputmethod.keyboard.internal;
 
 import android.content.res.TypedArray;
 
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
 /**
  * This class holds parameters to control how a gesture trail is drawn and animated on the screen.

@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.android.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 import com.android.inputmethod.latin.utils.CoordinateUtils;
 
 /**

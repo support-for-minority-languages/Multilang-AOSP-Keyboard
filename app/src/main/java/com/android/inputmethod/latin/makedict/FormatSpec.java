@@ -19,8 +19,8 @@ package com.android.inputmethod.latin.makedict;
 import java.util.Date;
 import java.util.HashMap;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 
 /**
  * Dictionary File Format Specification.

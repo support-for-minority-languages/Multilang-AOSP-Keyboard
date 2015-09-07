@@ -18,8 +18,8 @@ package com.android.inputmethod.latin.utils;
 
 import android.util.Log;
 
-import com.android.extrainputmethod.latin.SuggestedWords.SuggestedWordInfo;
-import com.android.extrainputmethod.latin.define.DebugFlags;
+import com.udmurtlyk.extrainputmethod.latin.SuggestedWords.SuggestedWordInfo;
+import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
 
 public final class AutoCorrectionUtils {
     private static final boolean DBG = DebugFlags.DEBUG_ENABLED;

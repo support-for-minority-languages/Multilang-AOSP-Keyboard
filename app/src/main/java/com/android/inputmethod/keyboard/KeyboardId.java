@@ -24,11 +24,11 @@ import android.view.inputmethod.InputMethodSubtype;
 import java.util.Arrays;
 import java.util.Locale;
 
-import com.android.extrainputmethod.compat.EditorInfoCompatUtils;
+import com.udmurtlyk.extrainputmethod.compat.EditorInfoCompatUtils;
 import com.android.inputmethod.latin.utils.InputTypeUtils;
 import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
 
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.KEYBOARD_LAYOUT_SET;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.KEYBOARD_LAYOUT_SET;
 
 /**
  * Unique identifier for each keyboard type.

@@ -18,8 +18,8 @@ package com.android.inputmethod.latin;
 
 import java.util.Locale;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.settings.NativeSuggestOptions;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.settings.NativeSuggestOptions;
 import com.android.inputmethod.latin.utils.JniUtils;
 
 public final class DicTraverseSession {

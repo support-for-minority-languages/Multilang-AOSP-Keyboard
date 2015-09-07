@@ -37,7 +37,7 @@ import android.view.ViewParent;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
 /**
  * Used as the UI component of {@link TextDecorator}.

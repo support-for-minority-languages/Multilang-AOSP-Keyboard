@@ -22,15 +22,15 @@ import android.os.Build;
 import android.util.Log;
 import android.view.inputmethod.InputMethodSubtype;
 
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.R;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
-
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.KEYBOARD_LAYOUT_SET;
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.UNTRANSLATABLE_STRING_IN_SUBTYPE_NAME;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.KEYBOARD_LAYOUT_SET;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.UNTRANSLATABLE_STRING_IN_SUBTYPE_NAME;
 
 public final class SubtypeLocaleUtils {
     private static final String TAG = SubtypeLocaleUtils.class.getSimpleName();
@@ -39,7 +39,7 @@ public final class SubtypeLocaleUtils {
     private static final String RESOURCE_PACKAGE_NAME = Constants.class.getPackage().getName();
 
     // Special language code to represent "no language".
-    public static final String NO_LANGUAGE = "en_US";
+    public static final String NO_LANGUAGE = "zz";
     public static final String QWERTY = "qwerty";
     public static final String EMOJI = "emoji";
     public static final int UNKNOWN_KEYBOARD_LAYOUT = R.string.subtype_generic;

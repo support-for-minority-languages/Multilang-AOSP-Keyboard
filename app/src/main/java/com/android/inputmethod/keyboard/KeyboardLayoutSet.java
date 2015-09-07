@@ -38,19 +38,19 @@ import java.io.IOException;
 import java.lang.ref.SoftReference;
 import java.util.HashMap;
 
-import com.android.extrainputmethod.compat.EditorInfoCompatUtils;
-import com.android.extrainputmethod.compat.InputMethodSubtypeCompatUtils;
-import com.android.extrainputmethod.latin.InputAttributes;
-import com.android.extrainputmethod.latin.R;
-import com.android.extrainputmethod.latin.SubtypeSwitcher;
-import com.android.extrainputmethod.latin.define.DebugFlags;
+import com.udmurtlyk.extrainputmethod.compat.EditorInfoCompatUtils;
+import com.udmurtlyk.extrainputmethod.compat.InputMethodSubtypeCompatUtils;
+import com.udmurtlyk.extrainputmethod.latin.InputAttributes;
+import com.udmurtlyk.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.SubtypeSwitcher;
+import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
 import com.android.inputmethod.latin.utils.InputTypeUtils;
 import com.android.inputmethod.latin.utils.ScriptUtils;
 import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
 import com.android.inputmethod.latin.utils.XmlParseUtils;
 
-import static com.android.extrainputmethod.latin.Constants.ImeOption.FORCE_ASCII;
-import static com.android.extrainputmethod.latin.Constants.ImeOption.NO_SETTINGS_KEY;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.ImeOption.FORCE_ASCII;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.ImeOption.NO_SETTINGS_KEY;
 
 /**
  * This class represents a set of keyboard layouts. Each of them represents a different keyboard

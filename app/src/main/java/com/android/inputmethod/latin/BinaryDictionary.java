@@ -23,7 +23,6 @@ import android.util.SparseArray;
 import com.android.inputmethod.keyboard.ProximityInfo;
 import com.android.inputmethod.latin.makedict.DictionaryHeader;
 import com.android.inputmethod.latin.makedict.FormatSpec;
-import com.android.inputmethod.latin.makedict.FormatSpec.DictionaryOptions;
 import com.android.inputmethod.latin.makedict.UnsupportedFormatException;
 import com.android.inputmethod.latin.makedict.WordProperty;
 
@@ -34,18 +33,18 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.Dictionary;
-import com.android.extrainputmethod.latin.InputPointers;
-import com.android.extrainputmethod.latin.SuggestedWords.SuggestedWordInfo;
-import com.android.extrainputmethod.latin.WordComposer;
-import com.android.extrainputmethod.latin.settings.SettingsValuesForSuggestion;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.Dictionary;
+import com.udmurtlyk.extrainputmethod.latin.InputPointers;
+import com.udmurtlyk.extrainputmethod.latin.WordComposer;
+import com.udmurtlyk.extrainputmethod.latin.settings.SettingsValuesForSuggestion;
 import com.android.inputmethod.latin.utils.BinaryDictionaryUtils;
 import com.android.inputmethod.latin.utils.FileUtils;
 import com.android.inputmethod.latin.utils.JniUtils;
 import com.android.inputmethod.latin.utils.LanguageModelParam;
 import com.android.inputmethod.latin.utils.StringUtils;
+import com.udmurtlyk.extrainputmethod.latin.SuggestedWords;
 
 // additional imports since we changed the package name.
 // -- don't delete on merge
@@ -259,12 +258,12 @@ public final class BinaryDictionary extends Dictionary {
         }
         final boolean hasHistoricalInfo = DictionaryHeader.ATTRIBUTE_VALUE_TRUE.equals(
                 attributes.get(DictionaryHeader.HAS_HISTORICAL_INFO_KEY));
-        return new DictionaryHeader(outHeaderSize[0], new DictionaryOptions(attributes),
+        return new DictionaryHeader(outHeaderSize[0], new FormatSpec.DictionaryOptions(attributes),
                 new FormatSpec.FormatOptions(outFormatVersion[0], hasHistoricalInfo));
     }
 
     @Override
-    public ArrayList<SuggestedWordInfo> getSuggestions(final WordComposer composer,
+    public ArrayList<SuggestedWords.SuggestedWordInfo> getSuggestions(final WordComposer composer,
             final PrevWordsInfo prevWordsInfo, final ProximityInfo proximityInfo,
             final SettingsValuesForSuggestion settingsValuesForSuggestion,
             final int sessionId, final float[] inOutLanguageWeight) {
@@ -314,7 +313,7 @@ public final class BinaryDictionary extends Dictionary {
             inOutLanguageWeight[0] = session.mInputOutputLanguageWeight[0];
         }
         final int count = session.mOutputSuggestionCount[0];
-        final ArrayList<SuggestedWordInfo> suggestions = new ArrayList<>();
+        final ArrayList<SuggestedWords.SuggestedWordInfo> suggestions = new ArrayList<>();
         for (int j = 0; j < count; ++j) {
             final int start = j * Constants.DICTIONARY_MAX_WORD_LENGTH;
             int len = 0;
@@ -323,7 +322,7 @@ public final class BinaryDictionary extends Dictionary {
                 ++len;
             }
             if (len > 0) {
-                suggestions.add(new SuggestedWordInfo(
+                suggestions.add(new SuggestedWords.SuggestedWordInfo(
                         new String(session.mOutputCodePoints, start, len),
                         session.mOutputScores[j], session.mOutputTypes[j], this /* sourceDict */,
                         session.mSpaceIndices[j] /* indexOfTouchPointOfSecondWord */,
@@ -610,7 +609,7 @@ public final class BinaryDictionary extends Dictionary {
     }
 
     @Override
-    public boolean shouldAutoCommit(final SuggestedWordInfo candidate) {
+    public boolean shouldAutoCommit(final SuggestedWords.SuggestedWordInfo candidate) {
         return candidate.mAutoCommitFirstWordConfidence > CONFIDENCE_TO_AUTO_COMMIT;
     }
 

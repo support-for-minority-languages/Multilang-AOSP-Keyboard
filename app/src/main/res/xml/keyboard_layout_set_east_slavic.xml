@@ -19,7 +19,7 @@
 -->
 
 <KeyboardLayoutSet
-    xmlns:latin="http://schemas.android.com/apk/res/com.android.extrainputmethod.latin">
+    xmlns:latin="http://schemas.android.com/apk/res/com.udmurtlyk.extrainputmethod.latin">
     <Feature
         latin:supportedScript="cyrillic" />
     <Element

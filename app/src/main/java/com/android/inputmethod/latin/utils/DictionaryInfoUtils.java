@@ -33,11 +33,11 @@ import java.util.Iterator;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-import com.android.extrainputmethod.latin.AssetFileAddress;
-import com.android.extrainputmethod.latin.BinaryDictionaryGetter;
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
-import com.android.extrainputmethod.latin.settings.SpacingAndPunctuations;
+import com.udmurtlyk.extrainputmethod.latin.AssetFileAddress;
+import com.udmurtlyk.extrainputmethod.latin.BinaryDictionaryGetter;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.settings.SpacingAndPunctuations;
 
 /**
  * This class encapsulates the logic for the Latin-IME side of dictionary information management.

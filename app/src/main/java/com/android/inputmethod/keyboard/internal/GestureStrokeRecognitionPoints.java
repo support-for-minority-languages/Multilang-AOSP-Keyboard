@@ -18,8 +18,8 @@ package com.android.inputmethod.keyboard.internal;
 
 import android.util.Log;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.InputPointers;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.InputPointers;
 import com.android.inputmethod.latin.utils.ResizableIntArray;
 
 /**

@@ -24,16 +24,16 @@ import android.view.inputmethod.InputMethodSubtype;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.compat.InputMethodSubtypeCompatUtils;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.compat.InputMethodSubtypeCompatUtils;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.ASCII_CAPABLE;
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.EMOJI_CAPABLE;
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.IS_ADDITIONAL_SUBTYPE;
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.KEYBOARD_LAYOUT_SET;
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.UNTRANSLATABLE_STRING_IN_SUBTYPE_NAME;
-import static com.android.extrainputmethod.latin.Constants.Subtype.KEYBOARD_MODE;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.ASCII_CAPABLE;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.EMOJI_CAPABLE;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.IS_ADDITIONAL_SUBTYPE;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.KEYBOARD_LAYOUT_SET;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.UNTRANSLATABLE_STRING_IN_SUBTYPE_NAME;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.KEYBOARD_MODE;
 
 public final class AdditionalSubtypeUtils {
     private static final String TAG = AdditionalSubtypeUtils.class.getSimpleName();

@@ -30,7 +30,7 @@ import com.android.inputmethod.keyboard.Key;
 
 import java.util.HashSet;
 
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
 /**
  * The pop up key preview view.

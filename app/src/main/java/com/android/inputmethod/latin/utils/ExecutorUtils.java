@@ -21,7 +21,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
 
 /**
  * Utilities to manage executors.

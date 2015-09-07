@@ -36,10 +36,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.android.extrainputmethod.compat.BuildCompatUtils;
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
-import com.android.extrainputmethod.latin.settings.Settings;
+import com.udmurtlyk.extrainputmethod.compat.BuildCompatUtils;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.settings.Settings;
 
 final class EmojiCategory {
     private final String TAG = EmojiCategory.class.getSimpleName();

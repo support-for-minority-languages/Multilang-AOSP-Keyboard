@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.android.extrainputmethod.latin"
+        applicationId "com.udmurtlyk.extrainputmethod.latin"
         minSdkVersion 14
         targetSdkVersion 19
     }

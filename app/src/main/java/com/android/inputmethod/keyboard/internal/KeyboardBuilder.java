@@ -38,14 +38,12 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.Arrays;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 import com.android.inputmethod.latin.utils.ResourceUtils;
 import com.android.inputmethod.latin.utils.StringUtils;
 import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
 import com.android.inputmethod.latin.utils.XmlParseUtils;
-import com.android.inputmethod.latin.utils.XmlParseUtils.ParseException;
 
 /**
  * Keyboard Building helper.
@@ -155,8 +153,8 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
 
         mParams = params;
 
-        params.GRID_WIDTH = res.getInteger(R.integer.config_keyboard_grid_width);
-        params.GRID_HEIGHT = res.getInteger(R.integer.config_keyboard_grid_height);
+        params.GRID_WIDTH = res.getInteger(com.udmurtlyk.extrainputmethod.latin.R.integer.config_keyboard_grid_width);
+        params.GRID_HEIGHT = res.getInteger(com.udmurtlyk.extrainputmethod.latin.R.integer.config_keyboard_grid_height);
     }
 
     public void setAutoGenerate(final KeysCache keysCache) {
@@ -234,8 +232,8 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
     private void parseKeyboardAttributes(final XmlPullParser parser) {
         final AttributeSet attr = Xml.asAttributeSet(parser);
         final TypedArray keyboardAttr = mContext.obtainStyledAttributes(
-                attr, R.styleable.Keyboard, R.attr.keyboardStyle, R.style.Keyboard);
-        final TypedArray keyAttr = mResources.obtainAttributes(attr, R.styleable.Keyboard_Key);
+                attr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard, com.udmurtlyk.extrainputmethod.latin.R.attr.keyboardStyle, com.udmurtlyk.extrainputmethod.latin.R.style.Keyboard);
+        final TypedArray keyAttr = mResources.obtainAttributes(attr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key);
         try {
             final KeyboardParams params = mParams;
             final int height = params.mId.mHeight;
@@ -243,45 +241,45 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
             params.mOccupiedHeight = height;
             params.mOccupiedWidth = width;
             params.mTopPadding = (int)keyboardAttr.getFraction(
-                    R.styleable.Keyboard_keyboardTopPadding, height, height, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_keyboardTopPadding, height, height, 0);
             params.mBottomPadding = (int)keyboardAttr.getFraction(
-                    R.styleable.Keyboard_keyboardBottomPadding, height, height, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_keyboardBottomPadding, height, height, 0);
             params.mLeftPadding = (int)keyboardAttr.getFraction(
-                    R.styleable.Keyboard_keyboardLeftPadding, width, width, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_keyboardLeftPadding, width, width, 0);
             params.mRightPadding = (int)keyboardAttr.getFraction(
-                    R.styleable.Keyboard_keyboardRightPadding, width, width, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_keyboardRightPadding, width, width, 0);
 
             final int baseWidth =
                     params.mOccupiedWidth - params.mLeftPadding - params.mRightPadding;
             params.mBaseWidth = baseWidth;
-            params.mDefaultKeyWidth = (int)keyAttr.getFraction(R.styleable.Keyboard_Key_keyWidth,
+            params.mDefaultKeyWidth = (int)keyAttr.getFraction(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyWidth,
                     baseWidth, baseWidth, baseWidth / DEFAULT_KEYBOARD_COLUMNS);
             params.mHorizontalGap = (int)keyboardAttr.getFraction(
-                    R.styleable.Keyboard_horizontalGap, baseWidth, baseWidth, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_horizontalGap, baseWidth, baseWidth, 0);
             // TODO: Fix keyboard geometry calculation clearer. Historically vertical gap between
             // rows are determined based on the entire keyboard height including top and bottom
             // paddings.
             params.mVerticalGap = (int)keyboardAttr.getFraction(
-                    R.styleable.Keyboard_verticalGap, height, height, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_verticalGap, height, height, 0);
             final int baseHeight = params.mOccupiedHeight - params.mTopPadding
                     - params.mBottomPadding + params.mVerticalGap;
             params.mBaseHeight = baseHeight;
-            params.mDefaultRowHeight = (int)ResourceUtils.getDimensionOrFraction(keyboardAttr,
-                    R.styleable.Keyboard_rowHeight, baseHeight, baseHeight / DEFAULT_KEYBOARD_ROWS);
+            params.mDefaultRowHeight = (int) ResourceUtils.getDimensionOrFraction(keyboardAttr,
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_rowHeight, baseHeight, baseHeight / DEFAULT_KEYBOARD_ROWS);
 
             params.mKeyVisualAttributes = KeyVisualAttributes.newInstance(keyAttr);
 
             params.mMoreKeysTemplate = keyboardAttr.getResourceId(
-                    R.styleable.Keyboard_moreKeysTemplate, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_moreKeysTemplate, 0);
             params.mMaxMoreKeysKeyboardColumn = keyAttr.getInt(
-                    R.styleable.Keyboard_Key_maxMoreKeysColumn, 5);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_maxMoreKeysColumn, 5);
 
-            params.mThemeId = keyboardAttr.getInt(R.styleable.Keyboard_themeId, 0);
+            params.mThemeId = keyboardAttr.getInt(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_themeId, 0);
             params.mIconsSet.loadIcons(keyboardAttr);
             params.mTextsSet.setLocale(params.mId.mLocale, mContext);
 
             final int resourceId = keyboardAttr.getResourceId(
-                    R.styleable.Keyboard_touchPositionCorrectionData, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_touchPositionCorrectionData, 0);
             if (resourceId != 0) {
                 final String[] data = mResources.getStringArray(resourceId);
                 params.mTouchPositionCorrection.load(data);
@@ -335,12 +333,12 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
     private KeyboardRow parseRowAttributes(final XmlPullParser parser)
             throws XmlPullParserException {
         final AttributeSet attr = Xml.asAttributeSet(parser);
-        final TypedArray keyboardAttr = mResources.obtainAttributes(attr, R.styleable.Keyboard);
+        final TypedArray keyboardAttr = mResources.obtainAttributes(attr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard);
         try {
-            if (keyboardAttr.hasValue(R.styleable.Keyboard_horizontalGap)) {
+            if (keyboardAttr.hasValue(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_horizontalGap)) {
                 throw new XmlParseUtils.IllegalAttribute(parser, TAG_ROW, "horizontalGap");
             }
-            if (keyboardAttr.hasValue(R.styleable.Keyboard_verticalGap)) {
+            if (keyboardAttr.hasValue(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_verticalGap)) {
                 throw new XmlParseUtils.IllegalAttribute(parser, TAG_ROW, "verticalGap");
             }
             return new KeyboardRow(mResources, mParams, parser, mCurrentY);
@@ -396,11 +394,11 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
         }
         final KeyboardRow gridRows = new KeyboardRow(mResources, mParams, parser, mCurrentY);
         final TypedArray gridRowAttr = mResources.obtainAttributes(
-                Xml.asAttributeSet(parser), R.styleable.Keyboard_GridRows);
+                Xml.asAttributeSet(parser), com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_GridRows);
         final int codesArrayId = gridRowAttr.getResourceId(
-                R.styleable.Keyboard_GridRows_codesArray, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_GridRows_codesArray, 0);
         final int textsArrayId = gridRowAttr.getResourceId(
-                R.styleable.Keyboard_GridRows_textsArray, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_GridRows_textsArray, 0);
         gridRowAttr.recycle();
         if (codesArrayId == 0 && textsArrayId == 0) {
             throw new XmlParseUtils.ParseException(
@@ -472,11 +470,11 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
             return;
         }
         final TypedArray keyAttr = mResources.obtainAttributes(
-                Xml.asAttributeSet(parser), R.styleable.Keyboard_Key);
+                Xml.asAttributeSet(parser), com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key);
         final KeyStyle keyStyle = mParams.mKeyStyles.getKeyStyle(keyAttr, parser);
-        final String keySpec = keyStyle.getString(keyAttr, R.styleable.Keyboard_Key_keySpec);
+        final String keySpec = keyStyle.getString(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keySpec);
         if (TextUtils.isEmpty(keySpec)) {
-            throw new ParseException("Empty keySpec", parser);
+            throw new XmlParseUtils.ParseException("Empty keySpec", parser);
         }
         final Key key = new Key(keySpec, keyAttr, keyStyle, mParams, row);
         keyAttr.recycle();
@@ -496,7 +494,7 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
             return;
         }
         final TypedArray keyAttr = mResources.obtainAttributes(
-                Xml.asAttributeSet(parser), R.styleable.Keyboard_Key);
+                Xml.asAttributeSet(parser), com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key);
         final KeyStyle keyStyle = mParams.mKeyStyles.getKeyStyle(keyAttr, parser);
         final Key spacer = new Key.Spacer(keyAttr, keyStyle, mParams, row);
         keyAttr.recycle();
@@ -524,15 +522,15 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
         }
         final AttributeSet attr = Xml.asAttributeSet(parser);
         final TypedArray keyboardAttr = mResources.obtainAttributes(
-                attr, R.styleable.Keyboard_Include);
-        final TypedArray keyAttr = mResources.obtainAttributes(attr, R.styleable.Keyboard_Key);
+                attr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Include);
+        final TypedArray keyAttr = mResources.obtainAttributes(attr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key);
         int keyboardLayout = 0;
         try {
             XmlParseUtils.checkAttributeExists(
-                    keyboardAttr, R.styleable.Keyboard_Include_keyboardLayout, "keyboardLayout",
+                    keyboardAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Include_keyboardLayout, "keyboardLayout",
                     TAG_INCLUDE, parser);
             keyboardLayout = keyboardAttr.getResourceId(
-                    R.styleable.Keyboard_Include_keyboardLayout, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Include_keyboardLayout, 0);
             if (row != null) {
                 // Override current x coordinate.
                 row.setXPos(row.getKeyX(keyAttr));
@@ -637,44 +635,44 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
             return true;
         }
         final AttributeSet attr = Xml.asAttributeSet(parser);
-        final TypedArray caseAttr = mResources.obtainAttributes(attr, R.styleable.Keyboard_Case);
+        final TypedArray caseAttr = mResources.obtainAttributes(attr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case);
         try {
             final boolean keyboardLayoutSetMatched = matchString(caseAttr,
-                    R.styleable.Keyboard_Case_keyboardLayoutSet,
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_keyboardLayoutSet,
                     SubtypeLocaleUtils.getKeyboardLayoutSetName(id.mSubtype));
             final boolean keyboardLayoutSetElementMatched = matchTypedValue(caseAttr,
-                    R.styleable.Keyboard_Case_keyboardLayoutSetElement, id.mElementId,
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_keyboardLayoutSetElement, id.mElementId,
                     KeyboardId.elementIdToName(id.mElementId));
             final boolean keyboardThemeMacthed = matchTypedValue(caseAttr,
-                    R.styleable.Keyboard_Case_keyboardTheme, mParams.mThemeId,
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_keyboardTheme, mParams.mThemeId,
                     KeyboardTheme.getKeyboardThemeName(mParams.mThemeId));
             final boolean modeMatched = matchTypedValue(caseAttr,
-                    R.styleable.Keyboard_Case_mode, id.mMode, KeyboardId.modeName(id.mMode));
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_mode, id.mMode, KeyboardId.modeName(id.mMode));
             final boolean navigateNextMatched = matchBoolean(caseAttr,
-                    R.styleable.Keyboard_Case_navigateNext, id.navigateNext());
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_navigateNext, id.navigateNext());
             final boolean navigatePreviousMatched = matchBoolean(caseAttr,
-                    R.styleable.Keyboard_Case_navigatePrevious, id.navigatePrevious());
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_navigatePrevious, id.navigatePrevious());
             final boolean passwordInputMatched = matchBoolean(caseAttr,
-                    R.styleable.Keyboard_Case_passwordInput, id.passwordInput());
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_passwordInput, id.passwordInput());
             final boolean clobberSettingsKeyMatched = matchBoolean(caseAttr,
-                    R.styleable.Keyboard_Case_clobberSettingsKey, id.mClobberSettingsKey);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_clobberSettingsKey, id.mClobberSettingsKey);
             final boolean hasShortcutKeyMatched = matchBoolean(caseAttr,
-                    R.styleable.Keyboard_Case_hasShortcutKey, id.mHasShortcutKey);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_hasShortcutKey, id.mHasShortcutKey);
             final boolean languageSwitchKeyEnabledMatched = matchBoolean(caseAttr,
-                    R.styleable.Keyboard_Case_languageSwitchKeyEnabled,
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_languageSwitchKeyEnabled,
                     id.mLanguageSwitchKeyEnabled);
             final boolean isMultiLineMatched = matchBoolean(caseAttr,
-                    R.styleable.Keyboard_Case_isMultiLine, id.isMultiLine());
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_isMultiLine, id.isMultiLine());
             final boolean imeActionMatched = matchInteger(caseAttr,
-                    R.styleable.Keyboard_Case_imeAction, id.imeAction());
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_imeAction, id.imeAction());
             final boolean isIconDefinedMatched = isIconDefined(caseAttr,
-                    R.styleable.Keyboard_Case_isIconDefined, mParams.mIconsSet);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_isIconDefined, mParams.mIconsSet);
             final boolean localeCodeMatched = matchString(caseAttr,
-                    R.styleable.Keyboard_Case_localeCode, id.mLocale.toString());
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_localeCode, id.mLocale.toString());
             final boolean languageCodeMatched = matchString(caseAttr,
-                    R.styleable.Keyboard_Case_languageCode, id.mLocale.getLanguage());
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_languageCode, id.mLocale.getLanguage());
             final boolean countryCodeMatched = matchString(caseAttr,
-                    R.styleable.Keyboard_Case_countryCode, id.mLocale.getCountry());
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_countryCode, id.mLocale.getCountry());
             final boolean selected = keyboardLayoutSetMatched && keyboardLayoutSetElementMatched
                     && keyboardThemeMacthed && modeMatched && navigateNextMatched
                     && navigatePreviousMatched && passwordInputMatched && clobberSettingsKeyMatched
@@ -685,36 +683,36 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
             if (DEBUG) {
                 startTag("<%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s>%s", TAG_CASE,
                         textAttr(caseAttr.getString(
-                                R.styleable.Keyboard_Case_keyboardLayoutSet), "keyboardLayoutSet"),
+                                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_keyboardLayoutSet), "keyboardLayoutSet"),
                         textAttr(caseAttr.getString(
-                                R.styleable.Keyboard_Case_keyboardLayoutSetElement),
+                                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_keyboardLayoutSetElement),
                                 "keyboardLayoutSetElement"),
                         textAttr(caseAttr.getString(
-                                R.styleable.Keyboard_Case_keyboardTheme), "keyboardTheme"),
-                        textAttr(caseAttr.getString(R.styleable.Keyboard_Case_mode), "mode"),
-                        textAttr(caseAttr.getString(R.styleable.Keyboard_Case_imeAction),
+                                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_keyboardTheme), "keyboardTheme"),
+                        textAttr(caseAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_mode), "mode"),
+                        textAttr(caseAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_imeAction),
                                 "imeAction"),
-                        booleanAttr(caseAttr, R.styleable.Keyboard_Case_navigateNext,
+                        booleanAttr(caseAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_navigateNext,
                                 "navigateNext"),
-                        booleanAttr(caseAttr, R.styleable.Keyboard_Case_navigatePrevious,
+                        booleanAttr(caseAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_navigatePrevious,
                                 "navigatePrevious"),
-                        booleanAttr(caseAttr, R.styleable.Keyboard_Case_clobberSettingsKey,
+                        booleanAttr(caseAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_clobberSettingsKey,
                                 "clobberSettingsKey"),
-                        booleanAttr(caseAttr, R.styleable.Keyboard_Case_passwordInput,
+                        booleanAttr(caseAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_passwordInput,
                                 "passwordInput"),
-                        booleanAttr(caseAttr, R.styleable.Keyboard_Case_hasShortcutKey,
+                        booleanAttr(caseAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_hasShortcutKey,
                                 "hasShortcutKey"),
-                        booleanAttr(caseAttr, R.styleable.Keyboard_Case_languageSwitchKeyEnabled,
+                        booleanAttr(caseAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_languageSwitchKeyEnabled,
                                 "languageSwitchKeyEnabled"),
-                        booleanAttr(caseAttr, R.styleable.Keyboard_Case_isMultiLine,
+                        booleanAttr(caseAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_isMultiLine,
                                 "isMultiLine"),
-                        textAttr(caseAttr.getString(R.styleable.Keyboard_Case_isIconDefined),
+                        textAttr(caseAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_isIconDefined),
                                 "isIconDefined"),
-                        textAttr(caseAttr.getString(R.styleable.Keyboard_Case_localeCode),
+                        textAttr(caseAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_localeCode),
                                 "localeCode"),
-                        textAttr(caseAttr.getString(R.styleable.Keyboard_Case_languageCode),
+                        textAttr(caseAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_languageCode),
                                 "languageCode"),
-                        textAttr(caseAttr.getString(R.styleable.Keyboard_Case_countryCode),
+                        textAttr(caseAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Case_countryCode),
                                 "countryCode"),
                         selected ? "" : " skipped");
             }
@@ -786,16 +784,16 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
             throws XmlPullParserException, IOException {
         final AttributeSet attr = Xml.asAttributeSet(parser);
         final TypedArray keyStyleAttr = mResources.obtainAttributes(
-                attr, R.styleable.Keyboard_KeyStyle);
-        final TypedArray keyAttrs = mResources.obtainAttributes(attr, R.styleable.Keyboard_Key);
+                attr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_KeyStyle);
+        final TypedArray keyAttrs = mResources.obtainAttributes(attr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key);
         try {
-            if (!keyStyleAttr.hasValue(R.styleable.Keyboard_KeyStyle_styleName)) {
+            if (!keyStyleAttr.hasValue(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_KeyStyle_styleName)) {
                 throw new XmlParseUtils.ParseException("<" + TAG_KEY_STYLE
                         + "/> needs styleName attribute", parser);
             }
             if (DEBUG) {
                 startEndTag("<%s styleName=%s />%s", TAG_KEY_STYLE,
-                        keyStyleAttr.getString(R.styleable.Keyboard_KeyStyle_styleName),
+                        keyStyleAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_KeyStyle_styleName),
                         skip ? " skipped" : "");
             }
             if (!skip) {

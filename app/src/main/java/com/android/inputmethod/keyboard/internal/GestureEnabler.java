@@ -16,7 +16,7 @@
 
 package com.android.inputmethod.keyboard.internal;
 
-import com.android.extrainputmethod.accessibility.AccessibilityUtils;
+import com.udmurtlyk.extrainputmethod.accessibility.AccessibilityUtils;
 
 public final class GestureEnabler {
     /** True if we should handle gesture events. */

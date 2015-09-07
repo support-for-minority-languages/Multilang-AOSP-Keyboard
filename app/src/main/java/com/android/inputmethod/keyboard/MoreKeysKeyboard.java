@@ -23,8 +23,8 @@ import com.android.inputmethod.keyboard.internal.KeyboardBuilder;
 import com.android.inputmethod.keyboard.internal.KeyboardParams;
 import com.android.inputmethod.keyboard.internal.MoreKeySpec;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.latin.R;
 import com.android.inputmethod.latin.utils.StringUtils;
 import com.android.inputmethod.latin.utils.TypefaceUtils;
 

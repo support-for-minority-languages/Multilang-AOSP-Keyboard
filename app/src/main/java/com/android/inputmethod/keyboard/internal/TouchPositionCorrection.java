@@ -16,8 +16,8 @@
 
 package com.android.inputmethod.keyboard.internal;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.define.DebugFlags;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
 
 public final class TouchPositionCorrection {
     private static final int TOUCH_POSITION_CORRECTION_RECORD_SIZE = 3;

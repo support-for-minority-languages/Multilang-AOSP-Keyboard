@@ -18,7 +18,7 @@ package com.android.inputmethod.latin.utils;
 
 import android.util.Log;
 
-import com.android.extrainputmethod.latin.define.JniLibName;
+import com.udmurtlyk.extrainputmethod.latin.define.JniLibName;
 
 public final class JniUtils {
     private static final String TAG = JniUtils.class.getSimpleName();

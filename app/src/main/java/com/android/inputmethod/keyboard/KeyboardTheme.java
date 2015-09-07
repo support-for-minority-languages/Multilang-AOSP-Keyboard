@@ -22,9 +22,9 @@ import android.util.Log;
 
 import java.util.Arrays;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.compat.BuildCompatUtils;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.compat.BuildCompatUtils;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
 public final class KeyboardTheme implements Comparable<KeyboardTheme> {
     private static final String TAG = KeyboardTheme.class.getSimpleName();

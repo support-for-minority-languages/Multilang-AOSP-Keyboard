@@ -20,7 +20,6 @@ import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.SparseIntArray;
 
-import com.android.extrainputmethod.latin.R;
 import com.android.inputmethod.latin.utils.ResourceUtils;
 
 public final class KeyVisualAttributes {
@@ -51,26 +50,26 @@ public final class KeyVisualAttributes {
     public final float mHintLabelOffCenterRatio;
 
     private static final int[] VISUAL_ATTRIBUTE_IDS = {
-        R.styleable.Keyboard_Key_keyTypeface,
-        R.styleable.Keyboard_Key_keyLetterSize,
-        R.styleable.Keyboard_Key_keyLabelSize,
-        R.styleable.Keyboard_Key_keyLargeLetterRatio,
-        R.styleable.Keyboard_Key_keyHintLetterRatio,
-        R.styleable.Keyboard_Key_keyShiftedLetterHintRatio,
-        R.styleable.Keyboard_Key_keyHintLabelRatio,
-        R.styleable.Keyboard_Key_keyPreviewTextRatio,
-        R.styleable.Keyboard_Key_keyTextColor,
-        R.styleable.Keyboard_Key_keyTextInactivatedColor,
-        R.styleable.Keyboard_Key_keyTextShadowColor,
-        R.styleable.Keyboard_Key_functionalTextColor,
-        R.styleable.Keyboard_Key_keyHintLetterColor,
-        R.styleable.Keyboard_Key_keyHintLabelColor,
-        R.styleable.Keyboard_Key_keyShiftedLetterHintInactivatedColor,
-        R.styleable.Keyboard_Key_keyShiftedLetterHintActivatedColor,
-        R.styleable.Keyboard_Key_keyPreviewTextColor,
-        R.styleable.Keyboard_Key_keyHintLabelVerticalAdjustment,
-        R.styleable.Keyboard_Key_keyLabelOffCenterRatio,
-        R.styleable.Keyboard_Key_keyHintLabelOffCenterRatio
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyTypeface,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLetterSize,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLabelSize,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLargeLetterRatio,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLetterRatio,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyShiftedLetterHintRatio,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLabelRatio,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyPreviewTextRatio,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyTextColor,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyTextInactivatedColor,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyTextShadowColor,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_functionalTextColor,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLetterColor,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLabelColor,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyShiftedLetterHintInactivatedColor,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyShiftedLetterHintActivatedColor,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyPreviewTextColor,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLabelVerticalAdjustment,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLabelOffCenterRatio,
+        com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLabelOffCenterRatio
     };
     private static final SparseIntArray sVisualAttributeIds = new SparseIntArray();
     private static final int ATTR_DEFINED = 1;
@@ -94,50 +93,50 @@ public final class KeyVisualAttributes {
     }
 
     private KeyVisualAttributes(final TypedArray keyAttr) {
-        if (keyAttr.hasValue(R.styleable.Keyboard_Key_keyTypeface)) {
+        if (keyAttr.hasValue(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyTypeface)) {
             mTypeface = Typeface.defaultFromStyle(
-                    keyAttr.getInt(R.styleable.Keyboard_Key_keyTypeface, Typeface.NORMAL));
+                    keyAttr.getInt(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyTypeface, Typeface.NORMAL));
         } else {
             mTypeface = null;
         }
 
         mLetterRatio = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyLetterSize);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLetterSize);
         mLetterSize = ResourceUtils.getDimensionPixelSize(keyAttr,
-                R.styleable.Keyboard_Key_keyLetterSize);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLetterSize);
         mLabelRatio = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyLabelSize);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLabelSize);
         mLabelSize = ResourceUtils.getDimensionPixelSize(keyAttr,
-                R.styleable.Keyboard_Key_keyLabelSize);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLabelSize);
         mLargeLetterRatio = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyLargeLetterRatio);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLargeLetterRatio);
         mHintLetterRatio = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyHintLetterRatio);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLetterRatio);
         mShiftedLetterHintRatio = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyShiftedLetterHintRatio);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyShiftedLetterHintRatio);
         mHintLabelRatio = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyHintLabelRatio);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLabelRatio);
         mPreviewTextRatio = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyPreviewTextRatio);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyPreviewTextRatio);
 
-        mTextColor = keyAttr.getColor(R.styleable.Keyboard_Key_keyTextColor, 0);
+        mTextColor = keyAttr.getColor(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyTextColor, 0);
         mTextInactivatedColor = keyAttr.getColor(
-                R.styleable.Keyboard_Key_keyTextInactivatedColor, 0);
-        mTextShadowColor = keyAttr.getColor(R.styleable.Keyboard_Key_keyTextShadowColor, 0);
-        mFunctionalTextColor = keyAttr.getColor(R.styleable.Keyboard_Key_functionalTextColor, 0);
-        mHintLetterColor = keyAttr.getColor(R.styleable.Keyboard_Key_keyHintLetterColor, 0);
-        mHintLabelColor = keyAttr.getColor(R.styleable.Keyboard_Key_keyHintLabelColor, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyTextInactivatedColor, 0);
+        mTextShadowColor = keyAttr.getColor(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyTextShadowColor, 0);
+        mFunctionalTextColor = keyAttr.getColor(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_functionalTextColor, 0);
+        mHintLetterColor = keyAttr.getColor(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLetterColor, 0);
+        mHintLabelColor = keyAttr.getColor(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLabelColor, 0);
         mShiftedLetterHintInactivatedColor = keyAttr.getColor(
-                R.styleable.Keyboard_Key_keyShiftedLetterHintInactivatedColor, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyShiftedLetterHintInactivatedColor, 0);
         mShiftedLetterHintActivatedColor = keyAttr.getColor(
-                R.styleable.Keyboard_Key_keyShiftedLetterHintActivatedColor, 0);
-        mPreviewTextColor = keyAttr.getColor(R.styleable.Keyboard_Key_keyPreviewTextColor, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyShiftedLetterHintActivatedColor, 0);
+        mPreviewTextColor = keyAttr.getColor(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyPreviewTextColor, 0);
 
         mHintLabelVerticalAdjustment = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyHintLabelVerticalAdjustment, 0.0f);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLabelVerticalAdjustment, 0.0f);
         mLabelOffCenterRatio = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyLabelOffCenterRatio, 0.0f);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLabelOffCenterRatio, 0.0f);
         mHintLabelOffCenterRatio = ResourceUtils.getFraction(keyAttr,
-                R.styleable.Keyboard_Key_keyHintLabelOffCenterRatio, 0.0f);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLabelOffCenterRatio, 0.0f);
     }
 }

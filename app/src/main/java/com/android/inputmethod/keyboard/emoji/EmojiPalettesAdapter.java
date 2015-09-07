@@ -27,7 +27,7 @@ import com.android.inputmethod.keyboard.Key;
 import com.android.inputmethod.keyboard.Keyboard;
 import com.android.inputmethod.keyboard.KeyboardView;
 
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
 final class EmojiPalettesAdapter extends PagerAdapter {
     private static final String TAG = EmojiPalettesAdapter.class.getSimpleName();

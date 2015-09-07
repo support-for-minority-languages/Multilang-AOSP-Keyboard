@@ -28,10 +28,9 @@ import android.view.ViewGroup;
 
 import com.android.inputmethod.keyboard.internal.KeyDrawParams;
 
-import com.android.extrainputmethod.accessibility.AccessibilityUtils;
-import com.android.extrainputmethod.accessibility.MoreKeysKeyboardAccessibilityDelegate;
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.accessibility.AccessibilityUtils;
+import com.udmurtlyk.extrainputmethod.accessibility.MoreKeysKeyboardAccessibilityDelegate;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 import com.android.inputmethod.latin.utils.CoordinateUtils;
 
 /**
@@ -54,22 +53,22 @@ public class MoreKeysKeyboardView extends KeyboardView implements MoreKeysPanel 
     protected MoreKeysKeyboardAccessibilityDelegate mAccessibilityDelegate;
 
     public MoreKeysKeyboardView(final Context context, final AttributeSet attrs) {
-        this(context, attrs, R.attr.moreKeysKeyboardViewStyle);
+        this(context, attrs, com.udmurtlyk.extrainputmethod.latin.R.attr.moreKeysKeyboardViewStyle);
     }
 
     public MoreKeysKeyboardView(final Context context, final AttributeSet attrs,
             final int defStyle) {
         super(context, attrs, defStyle);
         final TypedArray moreKeysKeyboardViewAttr = context.obtainStyledAttributes(attrs,
-                R.styleable.MoreKeysKeyboardView, defStyle, R.style.MoreKeysKeyboardView);
-        mDivider = moreKeysKeyboardViewAttr.getDrawable(R.styleable.MoreKeysKeyboardView_divider);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.MoreKeysKeyboardView, defStyle, com.udmurtlyk.extrainputmethod.latin.R.style.MoreKeysKeyboardView);
+        mDivider = moreKeysKeyboardViewAttr.getDrawable(com.udmurtlyk.extrainputmethod.latin.R.styleable.MoreKeysKeyboardView_divider);
         if (mDivider != null) {
             // TODO: Drawable itself should have an alpha value.
             mDivider.setAlpha(128);
         }
         moreKeysKeyboardViewAttr.recycle();
         mKeyDetector = new MoreKeysDetector(getResources().getDimension(
-                R.dimen.config_more_keys_keyboard_slide_allowance));
+                com.udmurtlyk.extrainputmethod.latin.R.dimen.config_more_keys_keyboard_slide_allowance));
     }
 
     @Override
@@ -110,8 +109,8 @@ public class MoreKeysKeyboardView extends KeyboardView implements MoreKeysPanel 
             if (mAccessibilityDelegate == null) {
                 mAccessibilityDelegate = new MoreKeysKeyboardAccessibilityDelegate(
                         this, mKeyDetector);
-                mAccessibilityDelegate.setOpenAnnounce(R.string.spoken_open_more_keys_keyboard);
-                mAccessibilityDelegate.setCloseAnnounce(R.string.spoken_close_more_keys_keyboard);
+                mAccessibilityDelegate.setOpenAnnounce(com.udmurtlyk.extrainputmethod.latin.R.string.spoken_open_more_keys_keyboard);
+                mAccessibilityDelegate.setCloseAnnounce(com.udmurtlyk.extrainputmethod.latin.R.string.spoken_close_more_keys_keyboard);
             }
             mAccessibilityDelegate.setKeyboard(keyboard);
         } else {

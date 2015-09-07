@@ -20,8 +20,8 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.text.TextUtils;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 import com.android.inputmethod.latin.utils.RunInLocale;
 import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
 
