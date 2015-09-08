@@ -20,6 +20,7 @@
 
 <Keyboard
     xmlns:latin="http://schemas.android.com/apk/res/com.udmurtlyk.extrainputmethod.latin"
+    latin:rowHeight="22%p"
 >
     <include
         latin:keyboardLayout="@xml/rows_cyrillic_4row" />
