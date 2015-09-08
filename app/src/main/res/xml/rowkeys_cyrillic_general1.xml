@@ -51,8 +51,7 @@
     <!-- U+043D: "н" CYRILLIC SMALL LETTER EN -->
     <Key
         latin:keySpec="&#x043D;"
-        latin:keyHintLabel="6"
-        latin:additionalMoreKeys="6"
+        latin:keyHintLabel="!text/morekeys_cyrillic_en"
         latin:moreKeys="!text/morekeys_cyrillic_en" />
     <!-- U+0433: "г" CYRILLIC SMALL LETTER GHE -->
     <Key

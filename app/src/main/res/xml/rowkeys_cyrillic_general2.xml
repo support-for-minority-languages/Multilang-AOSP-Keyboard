@@ -24,15 +24,18 @@
     <!-- U+0444: "ф" CYRILLIC SMALL LETTER EF -->
     <Key
         latin:keySpec="&#x0444;" />
+    <!-- U+044B: "ы" CYRILLIC SMALL LETTER YERU -->
     <Key
-        latin:keySpec="!text/keyspec_east_slavic_row2_2"
-        latin:moreKeys="!text/morekeys_east_slavic_row2_2" />
+        latin:keySpec="&#x044B;"
+        latin:keyHintLabel="!text/morekeys_cyrillic_yy"
+        latin:moreKeys="!text/morekeys_cyrillic_yy" />
     <!-- U+0432: "в" CYRILLIC SMALL LETTER VE -->
     <Key
         latin:keySpec="&#x0432;" />
     <!-- U+0430: "а" CYRILLIC SMALL LETTER A -->
     <Key
         latin:keySpec="&#x0430;"
+        latin:keyHintLabel="!text/morekeys_cyrillic_a"
         latin:moreKeys="!text/morekeys_cyrillic_a" />
     <!-- U+043F: "п" CYRILLIC SMALL LETTER PE -->
     <Key
