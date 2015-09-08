@@ -66,6 +66,14 @@
             android:isAsciiCapable="false"
     />
     <subtype android:icon="@drawable/ic_ime_switcher_dark"
+        android:label="@string/keyboard_name_udm_4row"
+        android:imeSubtypeLocale="udm"
+        android:imeSubtypeMode="keyboard"
+        android:imeSubtypeExtraValue="KeyboardLayoutSet=cyrillic_4row,SupportTouchPositionCorrection,EmojiCapable"
+        android:overridesImplicitlyEnabledSubtype="false"
+        android:isAsciiCapable="false"
+        />
+    <subtype android:icon="@drawable/ic_ime_switcher_dark"
         android:label="@string/keyboard_name_kv"
         android:imeSubtypeLocale="kv"
         android:imeSubtypeMode="keyboard"

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="keyboard_name_udm">удмурт</string>
+    <string name="keyboard_name_udm_4row">удмурт (4 чур)</string>
     <string name="keyboard_name_kv">коми</string>
 </resources>
