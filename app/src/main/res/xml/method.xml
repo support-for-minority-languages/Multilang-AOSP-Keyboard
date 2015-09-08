@@ -25,6 +25,7 @@
     en_US: English (United States)/qwerty
     ru: Russian/east_slavic
     udm: Udmurt
+    kv: Komi
     zz: QWERTY/qwerty
     (zz: Emoji/emoji)
     -->
@@ -64,6 +65,14 @@
             android:overridesImplicitlyEnabledSubtype="false"
             android:isAsciiCapable="false"
     />
+    <subtype android:icon="@drawable/ic_ime_switcher_dark"
+        android:label="@string/keyboard_name_kv"
+        android:imeSubtypeLocale="kv"
+        android:imeSubtypeMode="keyboard"
+        android:imeSubtypeExtraValue="KeyboardLayoutSet=cyrillic_general,SupportTouchPositionCorrection,EmojiCapable"
+        android:overridesImplicitlyEnabledSubtype="false"
+        android:isAsciiCapable="false"
+        />
     <!--<subtype android:icon="@drawable/ic_ime_switcher_dark"-->
             <!--android:label="@string/subtype_no_language_qwerty"-->
             <!--android:subtypeId="0xa239ebad"-->

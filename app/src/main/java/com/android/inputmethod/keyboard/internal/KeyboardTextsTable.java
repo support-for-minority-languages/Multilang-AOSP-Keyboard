@@ -83,55 +83,55 @@ public final class KeyboardTextsTable {
 
     private static final String[] NAMES = {
     //  /* index:histogram */ "name",
-        /*   0: 2 */ "morekeys_a",
-        /*   1: 2 */ "morekeys_e",
-        /*   2: 2 */ "morekeys_i",
-        /*   3: 2 */ "morekeys_o",
-        /*   4: 2 */ "morekeys_u",
-        /*   5: 2 */ "morekeys_s",
-        /*   6: 2 */ "morekeys_n",
-        /*   7: 2 */ "morekeys_c",
-        /*   8: 2 */ "keyspec_east_slavic_row1_9",
-        /*   9: 2 */ "keyspec_east_slavic_row2_2",
-        /*  10: 2 */ "keyspec_east_slavic_row2_11",
-        /*  11: 2 */ "keyspec_east_slavic_row3_5",
-        /*  12: 2 */ "morekeys_cyrillic_ie",
-        /*  13: 2 */ "morekeys_cyrillic_soft_sign",
-        /*  14: 2 */ "keylabel_to_alpha",
-        /*  15: 2 */ "single_quotes",
-        /*  16: 2 */ "double_quotes",
-        /*  17: 1 */ "morekeys_y",
-        /*  18: 1 */ "morekeys_d",
-        /*  19: 1 */ "morekeys_r",
-        /*  20: 1 */ "morekeys_t",
-        /*  21: 1 */ "morekeys_z",
-        /*  22: 1 */ "morekeys_k",
-        /*  23: 1 */ "morekeys_l",
-        /*  24: 1 */ "morekeys_g",
-        /*  25: 1 */ "morekeys_h",
-        /*  26: 1 */ "morekeys_j",
-        /*  27: 1 */ "morekeys_w",
-        /*  28: 1 */ "morekeys_cyrillic_o",
-        /*  29: 1 */ "morekeys_cyrillic_i",
-        /*  30: 1 */ "morekeys_cyrillic_dzh",
-        /*  31: 1 */ "morekeys_cyrillic_tsh",
-        /*  32: 1 */ "morekeys_cyrillic_i",
-        /*  33: 1 */ "morekeys_cyrillic_dz",
-        /*  34: 0 */ "morekeys_v",
-        /*  35: 0 */ "morekeys_q",
-        /*  36: 0 */ "morekeys_x",
-        /*  37: 0 */ "keyspec_q",
-        /*  38: 0 */ "keyspec_w",
-        /*  39: 0 */ "keyspec_y",
-        /*  40: 0 */ "keyspec_x",
-        /*  41: 0 */ "keyspec_nordic_row1_11",
-        /*  42: 0 */ "keyspec_nordic_row2_10",
-        /*  43: 0 */ "keyspec_nordic_row2_11",
-        /*  44: 0 */ "morekeys_nordic_row2_10",
-        /*  45: 0 */ "morekeys_nordic_row2_11",
-        /*  46: 0 */ "morekeys_east_slavic_row2_2",
-        /*  47: 0 */ "morekeys_east_slavic_row2_11",
-        /*  48: 0 */ "morekeys_cyrillic_u",
+        /*   0: 3 */ "keyspec_east_slavic_row1_9",
+        /*   1: 3 */ "keyspec_east_slavic_row2_2",
+        /*   2: 3 */ "keyspec_east_slavic_row2_11",
+        /*   3: 3 */ "keyspec_east_slavic_row3_5",
+        /*   4: 3 */ "morekeys_cyrillic_ie",
+        /*   5: 3 */ "morekeys_cyrillic_soft_sign",
+        /*   6: 3 */ "keylabel_to_alpha",
+        /*   7: 3 */ "single_quotes",
+        /*   8: 3 */ "double_quotes",
+        /*   9: 2 */ "morekeys_a",
+        /*  10: 2 */ "morekeys_e",
+        /*  11: 2 */ "morekeys_i",
+        /*  12: 2 */ "morekeys_o",
+        /*  13: 2 */ "morekeys_u",
+        /*  14: 2 */ "morekeys_s",
+        /*  15: 2 */ "morekeys_n",
+        /*  16: 2 */ "morekeys_c",
+        /*  17: 2 */ "morekeys_cyrillic_o",
+        /*  18: 2 */ "morekeys_cyrillic_i",
+        /*  19: 2 */ "morekeys_cyrillic_i",
+        /*  20: 1 */ "morekeys_y",
+        /*  21: 1 */ "morekeys_d",
+        /*  22: 1 */ "morekeys_r",
+        /*  23: 1 */ "morekeys_t",
+        /*  24: 1 */ "morekeys_z",
+        /*  25: 1 */ "morekeys_k",
+        /*  26: 1 */ "morekeys_l",
+        /*  27: 1 */ "morekeys_g",
+        /*  28: 1 */ "morekeys_h",
+        /*  29: 1 */ "morekeys_j",
+        /*  30: 1 */ "morekeys_w",
+        /*  31: 1 */ "morekeys_cyrillic_u",
+        /*  32: 1 */ "morekeys_cyrillic_dzh",
+        /*  33: 1 */ "morekeys_cyrillic_tsh",
+        /*  34: 1 */ "morekeys_cyrillic_dz",
+        /*  35: 0 */ "morekeys_v",
+        /*  36: 0 */ "morekeys_q",
+        /*  37: 0 */ "morekeys_x",
+        /*  38: 0 */ "keyspec_q",
+        /*  39: 0 */ "keyspec_w",
+        /*  40: 0 */ "keyspec_y",
+        /*  41: 0 */ "keyspec_x",
+        /*  42: 0 */ "keyspec_nordic_row1_11",
+        /*  43: 0 */ "keyspec_nordic_row2_10",
+        /*  44: 0 */ "keyspec_nordic_row2_11",
+        /*  45: 0 */ "morekeys_nordic_row2_10",
+        /*  46: 0 */ "morekeys_nordic_row2_11",
+        /*  47: 0 */ "morekeys_east_slavic_row2_2",
+        /*  48: 0 */ "morekeys_east_slavic_row2_11",
         /*  49: 0 */ "morekeys_cyrillic_ka",
         /*  50: 0 */ "morekeys_cyrillic_en",
         /*  51: 0 */ "morekeys_cyrillic_ghe",
@@ -261,18 +261,20 @@ public final class KeyboardTextsTable {
 
     /* Default texts */
     private static final String[] TEXTS_DEFAULT = {
-        /* morekeys_a ~ */
-        EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,
-        EMPTY,
+        /* keyspec_east_slavic_row1_9 ~ */
+        EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,
         /* ~ morekeys_cyrillic_soft_sign */
         // Label for "switch to alphabetic" key.
         /* keylabel_to_alpha */ "ABC",
         /* single_quotes */ "!text/single_lqm_rqm",
         /* double_quotes */ "!text/double_lqm_rqm",
-        /* morekeys_y ~ */
+        /* morekeys_a ~ */
         EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,
-        EMPTY, EMPTY, EMPTY,
-        /* ~ morekeys_cyrillic_i */
+        EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,
+        /* ~ morekeys_w */
+        /* morekeys_cyrillic_u */ "3",
+        /* morekeys_cyrillic_dzh */ EMPTY,
+        /* morekeys_cyrillic_tsh */ EMPTY,
         /* morekeys_cyrillic_dz */ "0",
         /* morekeys_v ~ */
         EMPTY, EMPTY, EMPTY,
@@ -283,7 +285,7 @@ public final class KeyboardTextsTable {
         /* keyspec_x */ "x",
         /* keyspec_nordic_row1_11 ~ */
         EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,
-        EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,
+        EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,
         /* ~ morekeys_swiss_row2_11 */
         /* single_angle_quotes */ "!text/single_laqm_raqm",
         /* double_angle_quotes */ "!text/double_laqm_raqm",
@@ -463,6 +465,9 @@ public final class KeyboardTextsTable {
 
     /* Locale en: English */
     private static final String[] TEXTS_en = {
+        /* keyspec_east_slavic_row1_9 ~ */
+        null, null, null, null, null, null, null, null, null,
+        /* ~ double_quotes */
         // U+00E0: "à" LATIN SMALL LETTER A WITH GRAVE
         // U+00E1: "á" LATIN SMALL LETTER A WITH ACUTE
         // U+00E2: "â" LATIN SMALL LETTER A WITH CIRCUMFLEX
@@ -507,11 +512,45 @@ public final class KeyboardTextsTable {
         /* morekeys_c */ "\u00E7",
     };
 
-    /* Locale ru: Russian */
-    private static final String[] TEXTS_ru = {
+    /* Locale kv: Komi */
+    private static final String[] TEXTS_kv = {
+        // U+0449: "щ" CYRILLIC SMALL LETTER SHCHA
+        /* keyspec_east_slavic_row1_9 */ "\u0449",
+        // U+044B: "ы" CYRILLIC SMALL LETTER YERU
+        /* keyspec_east_slavic_row2_2 */ "\u044B",
+        // U+044D: "э" CYRILLIC SMALL LETTER E
+        /* keyspec_east_slavic_row2_11 */ "\u044D",
+        // U+0438: "и" CYRILLIC SMALL LETTER I
+        /* keyspec_east_slavic_row3_5 */ "\u0438",
+        // U+0451: "ё" CYRILLIC SMALL LETTER IO
+        /* morekeys_cyrillic_ie */ "\u0451",
+        // U+044A: "ъ" CYRILLIC SMALL LETTER HARD SIGN
+        /* morekeys_cyrillic_soft_sign */ "\u044A",
+        // Label for "switch to alphabetic" key.
+        // U+0410: "А" CYRILLIC CAPITAL LETTER A
+        // U+0411: "Б" CYRILLIC CAPITAL LETTER BE
+        // U+0412: "В" CYRILLIC CAPITAL LETTER VE
+        /* keylabel_to_alpha */ "\u0410\u0411\u0412",
+        /* single_quotes */ "!text/single_9qm_lqm",
+        /* double_quotes */ "!text/double_9qm_lqm",
         /* morekeys_a ~ */
         null, null, null, null, null, null, null, null,
         /* ~ morekeys_c */
+        // U+04E9: "ӧ", "ө" CYRILLIC SMALL LETTER O
+        /* morekeys_cyrillic_o */ "\u04E7,\u04E9",
+        // U+04E9: "ӥ" CYRILLIC SMALL LETTER I
+        /* morekeys_cyrillic_i */ "\u0456",
+        // U+04E9: "ӥ" CYRILLIC SMALL LETTER I
+        /* morekeys_cyrillic_i */ "\u0456",
+        /* morekeys_y ~ */
+        null, null, null, null, null, null, null, null, null, null, null,
+        /* ~ morekeys_w */
+        // U+0438: "ӱ" CYRILLIC SMALL LETTER U
+        /* morekeys_cyrillic_u */ "3,\u04F1",
+    };
+
+    /* Locale ru: Russian */
+    private static final String[] TEXTS_ru = {
         // U+0449: "щ" CYRILLIC SMALL LETTER SHCHA
         /* keyspec_east_slavic_row1_9 */ "\u0449",
         // U+044B: "ы" CYRILLIC SMALL LETTER YERU
@@ -535,9 +574,6 @@ public final class KeyboardTextsTable {
 
     /* Locale udm: Udmurt */
     private static final String[] TEXTS_udm = {
-        /* morekeys_a ~ */
-        null, null, null, null, null, null, null, null,
-        /* ~ morekeys_c */
         // U+0449: "щ" CYRILLIC SMALL LETTER SHCHA
         /* keyspec_east_slavic_row1_9 */ "\u0449",
         // U+044B: "ы" CYRILLIC SMALL LETTER YERU
@@ -557,25 +593,31 @@ public final class KeyboardTextsTable {
         /* keylabel_to_alpha */ "\u0410\u0411\u0412",
         /* single_quotes */ "!text/single_9qm_lqm",
         /* double_quotes */ "!text/double_9qm_lqm",
-        /* morekeys_y ~ */
-        null, null, null, null, null, null, null, null, null, null, null,
-        /* ~ morekeys_w */
+        /* morekeys_a ~ */
+        null, null, null, null, null, null, null, null,
+        /* ~ morekeys_c */
         // U+04E9: "ӧ" CYRILLIC SMALL LETTER O
         /* morekeys_cyrillic_o */ "\u04E7",
         // U+04E9: "ӥ" CYRILLIC SMALL LETTER I
         /* morekeys_cyrillic_i */ "\u04E5",
+        // U+04E9: "ӥ" CYRILLIC SMALL LETTER I
+        /* morekeys_cyrillic_i */ "\u04E5",
+        /* morekeys_y ~ */
+        null, null, null, null, null, null, null, null, null, null, null, null,
+        /* ~ morekeys_cyrillic_u */
         // U+04E9: "ӝ" CYRILLIC SMALL LETTER DZH
         /* morekeys_cyrillic_dzh */ "\u04DD",
         // U+04E9: "ӵ" CYRILLIC SMALL LETTER TSH
         /* morekeys_cyrillic_tsh */ "\u04F5",
-        // U+04E9: "ӥ" CYRILLIC SMALL LETTER I
-        /* morekeys_cyrillic_i */ "\u04E5",
         // U+04E9: "ӟ" CYRILLIC SMALL LETTER DZ
         /* morekeys_cyrillic_dz */ "0,\u04DF",
     };
 
     /* Locale zz: Alphabet */
     private static final String[] TEXTS_zz = {
+        /* keyspec_east_slavic_row1_9 ~ */
+        null, null, null, null, null, null, null, null, null,
+        /* ~ double_quotes */
         // U+00E0: "à" LATIN SMALL LETTER A WITH GRAVE
         // U+00E1: "á" LATIN SMALL LETTER A WITH ACUTE
         // U+00E2: "â" LATIN SMALL LETTER A WITH CIRCUMFLEX
@@ -652,9 +694,9 @@ public final class KeyboardTextsTable {
         // U+010B: "ċ" LATIN SMALL LETTER C WITH DOT ABOVE
         // U+010D: "č" LATIN SMALL LETTER C WITH CARON
         /* morekeys_c */ "\u00E7,\u0107,\u0109,\u010B,\u010D",
-        /* keyspec_east_slavic_row1_9 ~ */
-        null, null, null, null, null, null, null, null, null,
-        /* ~ double_quotes */
+        /* morekeys_cyrillic_o ~ */
+        null, null, null,
+        /* ~ morekeys_cyrillic_i */
         // U+00FD: "ý" LATIN SMALL LETTER Y WITH ACUTE
         // U+0177: "ŷ" LATIN SMALL LETTER Y WITH CIRCUMFLEX
         // U+00FF: "ÿ" LATIN SMALL LETTER Y WITH DIAERESIS
@@ -702,10 +744,11 @@ public final class KeyboardTextsTable {
     private static final Object[] LOCALES_AND_TEXTS = {
     // "locale", TEXT_ARRAY,  /* numberOfNonNullText/lengthOf_TEXT_ARRAY localeName */
         "DEFAULT", TEXTS_DEFAULT, /* 172/172 DEFAULT */
-        "en"     , TEXTS_en,    /*   8/  8 English */
-        "ru"     , TEXTS_ru,    /*   9/ 17 Russian */
-        "udm"    , TEXTS_udm,   /*  14/ 34 Udmurt */
-        "zz"     , TEXTS_zz,    /*  19/ 28 Alphabet */
+        "en"     , TEXTS_en,    /*   8/ 17 English */
+        "kv"     , TEXTS_kv,    /*  12/ 32 Komi */
+        "ru"     , TEXTS_ru,    /*   9/  9 Russian */
+        "udm"    , TEXTS_udm,   /*  14/ 35 Udmurt */
+        "zz"     , TEXTS_zz,    /*  19/ 31 Alphabet */
     };
 
     static {

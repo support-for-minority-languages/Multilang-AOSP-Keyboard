@@ -34,8 +34,7 @@
     <!-- U+0443: "у" CYRILLIC SMALL LETTER U -->
     <Key
         latin:keySpec="&#x0443;"
-        latin:keyHintLabel="3"
-        latin:additionalMoreKeys="3"
+        latin:keyHintLabel="!text/morekeys_cyrillic_u"
         latin:moreKeys="!text/morekeys_cyrillic_u" />
     <!-- U+043A: "к" CYRILLIC SMALL LETTER KA -->
     <Key
