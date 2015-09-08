@@ -22,5 +22,5 @@
     xmlns:latin="http://schemas.android.com/apk/res/com.udmurtlyk.extrainputmethod.latin"
 >
     <include
-        latin:keyboardLayout="@xml/rows_udmurt" />
+        latin:keyboardLayout="@xml/rows_cyrillic_general" />
 </Keyboard>

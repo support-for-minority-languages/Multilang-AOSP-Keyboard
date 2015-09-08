@@ -73,8 +73,8 @@
     <!-- U+0437: "з" CYRILLIC SMALL LETTER ZE -->
     <Key
         latin:keySpec="&#x0437;"
-        latin:keyHintLabel="0"
-        latin:additionalMoreKeys="0,ӟ" />
+        latin:keyHintLabel="!text/morekeys_cyrillic_dz"
+        latin:moreKeys="!text/morekeys_cyrillic_dz" />
     <!-- U+0445: "х" CYRILLIC SMALL LETTER HA -->
     <Key
         latin:keySpec="&#x0445;" />

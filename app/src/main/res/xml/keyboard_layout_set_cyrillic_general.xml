@@ -24,7 +24,7 @@
         latin:supportedScript="cyrillic" />
     <Element
         latin:elementName="alphabet"
-        latin:elementKeyboard="@xml/kbd_udmurt"
+        latin:elementKeyboard="@xml/kbd_cyrillic_general"
         latin:enableProximityCharsCorrection="true" />
     <Element
         latin:elementName="symbols"

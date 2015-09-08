@@ -60,7 +60,7 @@
             android:label="@string/keyboard_name_udm"
             android:imeSubtypeLocale="udm"
             android:imeSubtypeMode="keyboard"
-            android:imeSubtypeExtraValue="KeyboardLayoutSet=udmurt,SupportTouchPositionCorrection,EmojiCapable"
+            android:imeSubtypeExtraValue="KeyboardLayoutSet=cyrillic_general,SupportTouchPositionCorrection,EmojiCapable"
             android:overridesImplicitlyEnabledSubtype="false"
             android:isAsciiCapable="false"
     />

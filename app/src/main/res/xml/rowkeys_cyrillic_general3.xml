@@ -27,8 +27,8 @@
     <!-- U+0447: "ч" CYRILLIC SMALL LETTER CHE -->
     <Key
         latin:keySpec="&#x0447;"
-        latin:keyHintLabel="ӵ"
-        latin:additionalMoreKeys="ӵ" />
+        latin:keyHintLabel="!text/morekeys_cyrillic_tsh"
+        latin:moreKeys="!text/morekeys_cyrillic_tsh"  />
     <!-- U+0441: "с" CYRILLIC SMALL LETTER ES -->
     <Key
         latin:keySpec="&#x0441;" />
@@ -37,14 +37,15 @@
         latin:keySpec="&#x043C;" />
     <Key
         latin:keySpec="!text/keyspec_east_slavic_row3_5"
-        latin:keyHintLabel="ӥ"
-        latin:additionalMoreKeys="ӥ" />
+        latin:keyHintLabel="!text/morekeys_cyrillic_i"
+        latin:moreKeys="!text/morekeys_cyrillic_i" />
     <!-- U+0442: "т" CYRILLIC SMALL LETTER TE -->
     <Key
         latin:keySpec="&#x0442;" />
     <!-- U+044C: "ь" CYRILLIC SMALL LETTER SOFT SIGN -->
     <Key
         latin:keySpec="&#x044C;"
+        latin:keyHintLabel="!text/morekeys_cyrillic_soft_sign"
         latin:moreKeys="!text/morekeys_cyrillic_soft_sign" />
     <!-- U+0431: "б" CYRILLIC SMALL LETTER BE -->
     <Key
