@@ -42,7 +42,9 @@
         latin:keySpec="&#x043F;" />
     <!-- U+0440: "р" CYRILLIC SMALL LETTER ER -->
     <Key
-        latin:keySpec="&#x0440;" />
+        latin:keySpec="&#x0440;"
+        latin:keyHintLabel="!text/morekeys_cyrillic_er"
+        latin:moreKeys="!text/morekeys_cyrillic_er" />
     <!-- U+043E: "о" CYRILLIC SMALL LETTER O -->
     <Key
         latin:keySpec="&#x043E;"
@@ -50,7 +52,9 @@
         latin:moreKeys="!text/morekeys_cyrillic_o" />
     <!-- U+043B: "л" CYRILLIC SMALL LETTER EL -->
     <Key
-        latin:keySpec="&#x043B;" />
+        latin:keySpec="&#x043B;"
+        latin:keyHintLabel="!text/morekeys_cyrillic_el"
+        latin:moreKeys="!text/morekeys_cyrillic_el"  />
     <!-- U+0434: "д" CYRILLIC SMALL LETTER DE -->
     <Key
         latin:keySpec="&#x0434;"/>
@@ -61,5 +65,6 @@
         latin:moreKeys="!text/morekeys_cyrillic_dzh" />
     <Key
         latin:keySpec="!text/keyspec_east_slavic_row2_11"
+        latin:keyHintLabel="!text/morekeys_east_slavic_row2_11"
         latin:moreKeys="!text/morekeys_east_slavic_row2_11" />
 </merge>

@@ -24,8 +24,8 @@
     <!-- U+0439: "й" CYRILLIC SMALL LETTER SHORT I -->
     <Key
         latin:keySpec="&#x0439;"
-        latin:keyHintLabel="1"
-        latin:additionalMoreKeys="1" />
+        latin:keyHintLabel="!text/morekeys_cyrillic_short_i"
+        latin:additionalMoreKeys="!text/morekeys_cyrillic_short_i" />
     <!-- U+0446: "ц" CYRILLIC SMALL LETTER TSE -->
     <Key
         latin:keySpec="&#x0446;"
@@ -75,5 +75,7 @@
         latin:moreKeys="!text/morekeys_cyrillic_dz" />
     <!-- U+0445: "х" CYRILLIC SMALL LETTER HA -->
     <Key
-        latin:keySpec="&#x0445;" />
+        latin:keySpec="&#x0445;"
+        latin:keyHintLabel="!text/morekeys_cyrillic_ha"
+        latin:moreKeys="!text/morekeys_cyrillic_ha" /> />
 </merge>

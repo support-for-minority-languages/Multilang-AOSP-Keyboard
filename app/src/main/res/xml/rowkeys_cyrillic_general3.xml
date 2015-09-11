@@ -34,7 +34,9 @@
         latin:keySpec="&#x0441;" />
     <!-- U+043C: "м" CYRILLIC SMALL LETTER EM -->
     <Key
-        latin:keySpec="&#x043C;" />
+        latin:keySpec="&#x043C;"
+        latin:keyHintLabel="!text/morekeys_cyrillic_em"
+        latin:moreKeys="!text/morekeys_cyrillic_em" />
     <Key
         latin:keySpec="!text/keyspec_east_slavic_row3_5"
         latin:keyHintLabel="!text/morekeys_cyrillic_i"
