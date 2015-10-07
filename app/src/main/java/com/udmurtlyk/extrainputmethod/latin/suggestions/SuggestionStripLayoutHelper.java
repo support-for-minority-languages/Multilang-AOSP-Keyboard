@@ -88,6 +88,7 @@ final class SuggestionStripLayoutHelper {
     private final int mColorTypedWord;
     private final int mColorAutoCorrect;
     private final int mColorSuggested;
+    private final int mColorShortcut;
     private final float mAlphaObsoleted;
     private final float mCenterSuggestionWeight;
     private final int mCenterPositionInStrip;
@@ -135,6 +136,7 @@ final class SuggestionStripLayoutHelper {
         mColorTypedWord = a.getColor(R.styleable.SuggestionStripView_colorTypedWord, 0);
         mColorAutoCorrect = a.getColor(R.styleable.SuggestionStripView_colorAutoCorrect, 0);
         mColorSuggested = a.getColor(R.styleable.SuggestionStripView_colorSuggested, 0);
+        mColorShortcut = a.getColor(R.styleable.SuggestionStripView_colorShortcut, 0);
         mSuggestionsCountInStrip = a.getInt(
                 R.styleable.SuggestionStripView_suggestionsCountInStrip,
                 DEFAULT_SUGGESTIONS_COUNT_IN_STRIP);
@@ -307,6 +309,8 @@ final class SuggestionStripLayoutHelper {
         // Use identity for strings, not #equals : it's the typed word if it's the same object
         final boolean isTypedWord = suggestedWords.getInfo(indexInSuggestedWords).isKindOf(
                 SuggestedWordInfo.KIND_TYPED);
+        final boolean isShortcutWord = suggestedWords.getInfo(indexInSuggestedWords).isKindOf(
+                SuggestedWordInfo.KIND_SHORTCUT);
 
         final int color;
         if (indexInSuggestedWords == SuggestedWords.INDEX_OF_AUTO_CORRECTION
@@ -316,6 +320,8 @@ final class SuggestionStripLayoutHelper {
             color = mColorValidTypedWord;
         } else if (isTypedWord) {
             color = mColorTypedWord;
+        } else if (isShortcutWord) {
+            color = mColorShortcut;
         } else {
             color = mColorSuggested;
         }
