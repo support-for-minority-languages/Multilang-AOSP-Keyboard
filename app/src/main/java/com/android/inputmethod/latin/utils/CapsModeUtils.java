@@ -21,9 +21,9 @@ import android.text.TextUtils;
 
 import java.util.Locale;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.WordComposer;
-import com.android.extrainputmethod.latin.settings.SpacingAndPunctuations;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.WordComposer;
+import com.udmurtlyk.extrainputmethod.latin.settings.SpacingAndPunctuations;
 
 public final class CapsModeUtils {
     private CapsModeUtils() {

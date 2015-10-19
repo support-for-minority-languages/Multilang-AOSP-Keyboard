@@ -23,7 +23,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 
 import com.android.inputmethod.keyboard.internal.BatchInputArbiter;
-import com.android.inputmethod.keyboard.internal.BatchInputArbiter.BatchInputArbiterListener;
 import com.android.inputmethod.keyboard.internal.BogusMoveEventDetector;
 import com.android.inputmethod.keyboard.internal.GestureEnabler;
 import com.android.inputmethod.keyboard.internal.GestureStrokeDrawingParams;
@@ -34,16 +33,15 @@ import com.android.inputmethod.keyboard.internal.TypingTimeRecorder;
 
 import java.util.ArrayList;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.InputPointers;
-import com.android.extrainputmethod.latin.R;
-import com.android.extrainputmethod.latin.define.DebugFlags;
-import com.android.extrainputmethod.latin.settings.Settings;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.InputPointers;
+import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
+import com.udmurtlyk.extrainputmethod.latin.settings.Settings;
 import com.android.inputmethod.latin.utils.CoordinateUtils;
 import com.android.inputmethod.latin.utils.ResourceUtils;
 
 public final class PointerTracker implements PointerTrackerQueue.Element,
-        BatchInputArbiterListener {
+        BatchInputArbiter.BatchInputArbiterListener {
     private static final String TAG = PointerTracker.class.getSimpleName();
     private static final boolean DEBUG_EVENT = false;
     private static final boolean DEBUG_MOVE_EVENT = false;
@@ -115,19 +113,19 @@ public final class PointerTracker implements PointerTrackerQueue.Element,
 
         public PointerTrackerParams(final TypedArray mainKeyboardViewAttr) {
             mKeySelectionByDraggingFinger = mainKeyboardViewAttr.getBoolean(
-                    R.styleable.MainKeyboardView_keySelectionByDraggingFinger, false);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_keySelectionByDraggingFinger, false);
             mTouchNoiseThresholdTime = mainKeyboardViewAttr.getInt(
-                    R.styleable.MainKeyboardView_touchNoiseThresholdTime, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_touchNoiseThresholdTime, 0);
             mTouchNoiseThresholdDistance = mainKeyboardViewAttr.getDimensionPixelSize(
-                    R.styleable.MainKeyboardView_touchNoiseThresholdDistance, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_touchNoiseThresholdDistance, 0);
             mSuppressKeyPreviewAfterBatchInputDuration = mainKeyboardViewAttr.getInt(
-                    R.styleable.MainKeyboardView_suppressKeyPreviewAfterBatchInputDuration, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_suppressKeyPreviewAfterBatchInputDuration, 0);
             mKeyRepeatStartTimeout = mainKeyboardViewAttr.getInt(
-                    R.styleable.MainKeyboardView_keyRepeatStartTimeout, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_keyRepeatStartTimeout, 0);
             mKeyRepeatInterval = mainKeyboardViewAttr.getInt(
-                    R.styleable.MainKeyboardView_keyRepeatInterval, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_keyRepeatInterval, 0);
             mLongPressShiftLockTimeout = mainKeyboardViewAttr.getInt(
-                    R.styleable.MainKeyboardView_longPressShiftLockTimeout, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_longPressShiftLockTimeout, 0);
         }
     }
 
@@ -214,7 +212,7 @@ public final class PointerTracker implements PointerTrackerQueue.Element,
         final Resources res = mainKeyboardViewAttr.getResources();
         sNeedsPhantomSuddenMoveEventHack = Boolean.parseBoolean(
                 ResourceUtils.getDeviceOverrideValue(res,
-                        R.array.phantom_sudden_move_event_device_list, Boolean.FALSE.toString()));
+                        com.udmurtlyk.extrainputmethod.latin.R.array.phantom_sudden_move_event_device_list, Boolean.FALSE.toString()));
         BogusMoveEventDetector.init(res);
 
         sTimerProxy = timerProxy;

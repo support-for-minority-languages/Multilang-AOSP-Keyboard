@@ -21,8 +21,8 @@ import com.android.inputmethod.latin.PrevWordsInfo.WordInfo;
 
 import java.util.regex.Pattern;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.settings.SpacingAndPunctuations;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.settings.SpacingAndPunctuations;
 
 public final class PrevWordsInfoUtils {
     private PrevWordsInfoUtils() {

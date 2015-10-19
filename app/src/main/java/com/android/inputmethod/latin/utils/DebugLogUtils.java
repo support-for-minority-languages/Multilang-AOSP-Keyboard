@@ -18,7 +18,7 @@ package com.android.inputmethod.latin.utils;
 
 import android.util.Log;
 
-import com.android.extrainputmethod.latin.define.DebugFlags;
+import com.udmurtlyk.extrainputmethod.latin.define.DebugFlags;
 
 /**
  * A class for logging and debugging utility methods.

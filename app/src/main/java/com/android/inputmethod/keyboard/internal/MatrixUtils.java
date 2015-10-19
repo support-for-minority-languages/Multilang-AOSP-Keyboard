@@ -20,7 +20,7 @@ import android.util.Log;
 
 import java.util.Arrays;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
 
 /**
  * Utilities for matrix operations. Don't instantiate objects inside this class to prevent

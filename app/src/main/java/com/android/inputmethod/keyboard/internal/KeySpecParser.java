@@ -16,11 +16,11 @@
 
 package com.android.inputmethod.keyboard.internal;
 
-import com.android.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 import com.android.inputmethod.latin.utils.StringUtils;
 
-import static com.android.extrainputmethod.latin.Constants.CODE_OUTPUT_TEXT;
-import static com.android.extrainputmethod.latin.Constants.CODE_UNSPECIFIED;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.CODE_OUTPUT_TEXT;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.CODE_UNSPECIFIED;
 
 /**
  * The string parser of the key specification.

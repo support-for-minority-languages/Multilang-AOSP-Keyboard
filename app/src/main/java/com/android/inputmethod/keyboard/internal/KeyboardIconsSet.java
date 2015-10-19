@@ -24,7 +24,7 @@ import android.util.SparseIntArray;
 
 import java.util.HashMap;
 
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
 public final class KeyboardIconsSet {
     private static final String TAG = KeyboardIconsSet.class.getSimpleName();

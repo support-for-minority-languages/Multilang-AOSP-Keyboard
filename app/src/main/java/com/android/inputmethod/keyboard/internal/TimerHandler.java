@@ -25,7 +25,7 @@ import com.android.inputmethod.keyboard.PointerTracker;
 import com.android.inputmethod.keyboard.PointerTracker.TimerProxy;
 import com.android.inputmethod.keyboard.internal.TimerHandler.Callbacks;
 
-import com.android.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 import com.android.inputmethod.latin.utils.LeakGuardHandlerWrapper;
 
 // TODO: Separate this class into KeyTimerHandler and BatchInputTimerHandler or so.

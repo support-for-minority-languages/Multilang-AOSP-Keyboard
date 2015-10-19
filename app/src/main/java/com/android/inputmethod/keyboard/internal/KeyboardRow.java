@@ -27,7 +27,6 @@ import org.xmlpull.v1.XmlPullParser;
 
 import java.util.ArrayDeque;
 
-import com.android.extrainputmethod.latin.R;
 import com.android.inputmethod.latin.utils.ResourceUtils;
 
 /**
@@ -64,10 +63,10 @@ public final class KeyboardRow {
          */
         public RowAttributes(final TypedArray keyAttr, final float defaultKeyWidth,
                 final int keyboardWidth) {
-            mDefaultKeyWidth = keyAttr.getFraction(R.styleable.Keyboard_Key_keyWidth,
+            mDefaultKeyWidth = keyAttr.getFraction(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyWidth,
                     keyboardWidth, keyboardWidth, defaultKeyWidth);
-            mDefaultKeyLabelFlags = keyAttr.getInt(R.styleable.Keyboard_Key_keyLabelFlags, 0);
-            mDefaultBackgroundType = keyAttr.getInt(R.styleable.Keyboard_Key_backgroundType,
+            mDefaultKeyLabelFlags = keyAttr.getInt(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLabelFlags, 0);
+            mDefaultBackgroundType = keyAttr.getInt(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_backgroundType,
                     Key.BACKGROUND_TYPE_NORMAL);
         }
 
@@ -81,11 +80,11 @@ public final class KeyboardRow {
          */
         public RowAttributes(final TypedArray keyAttr, final RowAttributes defaultRowAttr,
                 final int keyboardWidth) {
-            mDefaultKeyWidth = keyAttr.getFraction(R.styleable.Keyboard_Key_keyWidth,
+            mDefaultKeyWidth = keyAttr.getFraction(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyWidth,
                     keyboardWidth, keyboardWidth, defaultRowAttr.mDefaultKeyWidth);
-            mDefaultKeyLabelFlags = keyAttr.getInt(R.styleable.Keyboard_Key_keyLabelFlags, 0)
+            mDefaultKeyLabelFlags = keyAttr.getInt(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLabelFlags, 0)
                     | defaultRowAttr.mDefaultKeyLabelFlags;
-            mDefaultBackgroundType = keyAttr.getInt(R.styleable.Keyboard_Key_backgroundType,
+            mDefaultBackgroundType = keyAttr.getInt(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_backgroundType,
                     defaultRowAttr.mDefaultBackgroundType);
         }
     }
@@ -98,12 +97,12 @@ public final class KeyboardRow {
             final XmlPullParser parser, final int y) {
         mParams = params;
         final TypedArray keyboardAttr = res.obtainAttributes(Xml.asAttributeSet(parser),
-                R.styleable.Keyboard);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard);
         mRowHeight = (int)ResourceUtils.getDimensionOrFraction(keyboardAttr,
-                R.styleable.Keyboard_rowHeight, params.mBaseHeight, params.mDefaultRowHeight);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_rowHeight, params.mBaseHeight, params.mDefaultRowHeight);
         keyboardAttr.recycle();
         final TypedArray keyAttr = res.obtainAttributes(Xml.asAttributeSet(parser),
-                R.styleable.Keyboard_Key);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key);
         mRowAttributesStack.push(new RowAttributes(
                 keyAttr, params.mDefaultKeyWidth, params.mBaseWidth));
         keyAttr.recycle();
@@ -151,10 +150,10 @@ public final class KeyboardRow {
     }
 
     public float getKeyX(final TypedArray keyAttr) {
-        if (keyAttr == null || !keyAttr.hasValue(R.styleable.Keyboard_Key_keyXPos)) {
+        if (keyAttr == null || !keyAttr.hasValue(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyXPos)) {
             return mCurrentX;
         }
-        final float keyXPos = keyAttr.getFraction(R.styleable.Keyboard_Key_keyXPos,
+        final float keyXPos = keyAttr.getFraction(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyXPos,
                 mParams.mBaseWidth, mParams.mBaseWidth, 0);
         if (keyXPos >= 0) {
             return keyXPos + mParams.mLeftPadding;
@@ -173,7 +172,7 @@ public final class KeyboardRow {
             return getDefaultKeyWidth();
         }
         final int widthType = ResourceUtils.getEnumValue(keyAttr,
-                R.styleable.Keyboard_Key_keyWidth, KEYWIDTH_NOT_ENUM);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyWidth, KEYWIDTH_NOT_ENUM);
         switch (widthType) {
         case KEYWIDTH_FILL_RIGHT:
             // If keyWidth is fillRight, the actual key width will be determined to fill
@@ -181,7 +180,7 @@ public final class KeyboardRow {
             final int keyboardRightEdge = mParams.mOccupiedWidth - mParams.mRightPadding;
             return keyboardRightEdge - keyXPos;
         default: // KEYWIDTH_NOT_ENUM
-            return keyAttr.getFraction(R.styleable.Keyboard_Key_keyWidth,
+            return keyAttr.getFraction(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyWidth,
                     mParams.mBaseWidth, mParams.mBaseWidth, getDefaultKeyWidth());
         }
     }

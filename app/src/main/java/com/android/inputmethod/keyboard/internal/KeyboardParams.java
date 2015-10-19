@@ -26,7 +26,7 @@ import java.util.Comparator;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import com.android.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 
 public class KeyboardParams {
     public KeyboardId mId;

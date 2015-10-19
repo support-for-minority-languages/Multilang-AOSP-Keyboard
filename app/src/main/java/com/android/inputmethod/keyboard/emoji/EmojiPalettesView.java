@@ -47,13 +47,10 @@ import com.android.inputmethod.keyboard.internal.KeyboardIconsSet;
 
 import java.util.concurrent.TimeUnit;
 
-import com.android.extrainputmethod.latin.AudioAndHapticFeedbackManager;
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
-import com.android.extrainputmethod.latin.SubtypeSwitcher;
+import com.udmurtlyk.extrainputmethod.latin.AudioAndHapticFeedbackManager;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.SubtypeSwitcher;
 import com.android.inputmethod.latin.utils.ResourceUtils;
-
-import static com.android.extrainputmethod.latin.Constants.NOT_A_COORDINATE;
 
 /**
  * View class to implement Emoji palettes.
@@ -96,19 +93,19 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
     private final EmojiCategory mEmojiCategory;
 
     public EmojiPalettesView(final Context context, final AttributeSet attrs) {
-        this(context, attrs, R.attr.emojiPalettesViewStyle);
+        this(context, attrs, com.udmurtlyk.extrainputmethod.latin.R.attr.emojiPalettesViewStyle);
     }
 
     public EmojiPalettesView(final Context context, final AttributeSet attrs, final int defStyle) {
         super(context, attrs, defStyle);
         final TypedArray keyboardViewAttr = context.obtainStyledAttributes(attrs,
-                R.styleable.KeyboardView, defStyle, R.style.KeyboardView);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.KeyboardView, defStyle, com.udmurtlyk.extrainputmethod.latin.R.style.KeyboardView);
         final int keyBackgroundId = keyboardViewAttr.getResourceId(
-                R.styleable.KeyboardView_keyBackground, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.KeyboardView_keyBackground, 0);
         mFunctionalKeyBackgroundId = keyboardViewAttr.getResourceId(
-                R.styleable.KeyboardView_functionalKeyBackground, keyBackgroundId);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.KeyboardView_functionalKeyBackground, keyBackgroundId);
         mSpacebarBackgroundId = keyboardViewAttr.getResourceId(
-                R.styleable.KeyboardView_spacebarBackground, keyBackgroundId);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.KeyboardView_spacebarBackground, keyBackgroundId);
         keyboardViewAttr.recycle();
         final KeyboardLayoutSet.Builder builder = new KeyboardLayoutSet.Builder(
                 context, null /* editorInfo */);
@@ -119,19 +116,19 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
                 mEmojiLayoutParams.mEmojiKeyboardHeight);
         final KeyboardLayoutSet layoutSet = builder.build();
         final TypedArray emojiPalettesViewAttr = context.obtainStyledAttributes(attrs,
-                R.styleable.EmojiPalettesView, defStyle, R.style.EmojiPalettesView);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.EmojiPalettesView, defStyle, com.udmurtlyk.extrainputmethod.latin.R.style.EmojiPalettesView);
         mEmojiCategory = new EmojiCategory(PreferenceManager.getDefaultSharedPreferences(context),
                 res, layoutSet, emojiPalettesViewAttr);
         mCategoryIndicatorEnabled = emojiPalettesViewAttr.getBoolean(
-                R.styleable.EmojiPalettesView_categoryIndicatorEnabled, false);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.EmojiPalettesView_categoryIndicatorEnabled, false);
         mCategoryIndicatorDrawableResId = emojiPalettesViewAttr.getResourceId(
-                R.styleable.EmojiPalettesView_categoryIndicatorDrawable, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.EmojiPalettesView_categoryIndicatorDrawable, 0);
         mCategoryIndicatorBackgroundResId = emojiPalettesViewAttr.getResourceId(
-                R.styleable.EmojiPalettesView_categoryIndicatorBackground, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.EmojiPalettesView_categoryIndicatorBackground, 0);
         mCategoryPageIndicatorColor = emojiPalettesViewAttr.getColor(
-                R.styleable.EmojiPalettesView_categoryPageIndicatorColor, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.EmojiPalettesView_categoryPageIndicatorColor, 0);
         mCategoryPageIndicatorBackground = emojiPalettesViewAttr.getColor(
-                R.styleable.EmojiPalettesView_categoryPageIndicatorBackground, 0);
+                com.udmurtlyk.extrainputmethod.latin.R.styleable.EmojiPalettesView_categoryPageIndicatorBackground, 0);
         emojiPalettesViewAttr.recycle();
         mDeleteKeyOnTouchListener = new DeleteKeyOnTouchListener(context);
     }
@@ -144,7 +141,7 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
         final int width = ResourceUtils.getDefaultKeyboardWidth(res)
                 + getPaddingLeft() + getPaddingRight();
         final int height = ResourceUtils.getDefaultKeyboardHeight(res)
-                + res.getDimensionPixelSize(R.dimen.config_suggestions_strip_height)
+                + res.getDimensionPixelSize(com.udmurtlyk.extrainputmethod.latin.R.dimen.config_suggestions_strip_height)
                 + getPaddingTop() + getPaddingBottom();
         setMeasuredDimension(width, height);
     }
@@ -152,9 +149,9 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
     private void addTab(final TabHost host, final int categoryId) {
         final String tabId = mEmojiCategory.getCategoryName(categoryId, 0 /* categoryPageId */);
         final TabHost.TabSpec tspec = host.newTabSpec(tabId);
-        tspec.setContent(R.id.emoji_keyboard_dummy);
+        tspec.setContent(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_keyboard_dummy);
         final ImageView iconView = (ImageView)LayoutInflater.from(getContext()).inflate(
-                R.layout.emoji_keyboard_tab_icon, null);
+                com.udmurtlyk.extrainputmethod.latin.R.layout.emoji_keyboard_tab_icon, null);
         iconView.setImageResource(mEmojiCategory.getCategoryTabIcon(categoryId));
         iconView.setContentDescription(mEmojiCategory.getAccessibilityDescription(categoryId));
         tspec.setIndicator(iconView);
@@ -163,7 +160,7 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
 
     @Override
     protected void onFinishInflate() {
-        mTabHost = (TabHost)findViewById(R.id.emoji_category_tabhost);
+        mTabHost = (TabHost)findViewById(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_category_tabhost);
         mTabHost.setup();
         for (final EmojiCategory.CategoryProperties properties
                 : mEmojiCategory.getShownCategories()) {
@@ -182,7 +179,7 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
 
         mEmojiPalettesAdapter = new EmojiPalettesAdapter(mEmojiCategory, this);
 
-        mEmojiPager = (ViewPager)findViewById(R.id.emoji_keyboard_pager);
+        mEmojiPager = (ViewPager)findViewById(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_keyboard_pager);
         mEmojiPager.setAdapter(mEmojiPalettesAdapter);
         mEmojiPager.setOnPageChangeListener(this);
         mEmojiPager.setOffscreenPageLimit(0);
@@ -190,18 +187,18 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
         mEmojiLayoutParams.setPagerProperties(mEmojiPager);
 
         mEmojiCategoryPageIndicatorView =
-                (EmojiCategoryPageIndicatorView)findViewById(R.id.emoji_category_page_id_view);
+                (EmojiCategoryPageIndicatorView)findViewById(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_category_page_id_view);
         mEmojiCategoryPageIndicatorView.setColors(
                 mCategoryPageIndicatorColor, mCategoryPageIndicatorBackground);
         mEmojiLayoutParams.setCategoryPageIdViewProperties(mEmojiCategoryPageIndicatorView);
 
         setCurrentCategoryId(mEmojiCategory.getCurrentCategoryId(), true /* force */);
 
-        final LinearLayout actionBar = (LinearLayout)findViewById(R.id.emoji_action_bar);
+        final LinearLayout actionBar = (LinearLayout)findViewById(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_action_bar);
         mEmojiLayoutParams.setActionBarProperties(actionBar);
 
         // deleteKey depends only on OnTouchListener.
-        mDeleteKey = (ImageButton)findViewById(R.id.emoji_keyboard_delete);
+        mDeleteKey = (ImageButton)findViewById(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_keyboard_delete);
         mDeleteKey.setBackgroundResource(mFunctionalKeyBackgroundId);
         mDeleteKey.setTag(Constants.CODE_DELETE);
         mDeleteKey.setOnTouchListener(mDeleteKeyOnTouchListener);
@@ -213,23 +210,23 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
         // if the event is canceled by moving off the finger from the view.
         // The text on alphabet keys are set at
         // {@link #startEmojiPalettes(String,int,float,Typeface)}.
-        mAlphabetKeyLeft = (TextView)findViewById(R.id.emoji_keyboard_alphabet_left);
+        mAlphabetKeyLeft = (TextView)findViewById(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_keyboard_alphabet_left);
         mAlphabetKeyLeft.setBackgroundResource(mFunctionalKeyBackgroundId);
         mAlphabetKeyLeft.setTag(Constants.CODE_ALPHA_FROM_EMOJI);
         mAlphabetKeyLeft.setOnTouchListener(this);
         mAlphabetKeyLeft.setOnClickListener(this);
-        mAlphabetKeyRight = (TextView)findViewById(R.id.emoji_keyboard_alphabet_right);
+        mAlphabetKeyRight = (TextView)findViewById(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_keyboard_alphabet_right);
         mAlphabetKeyRight.setBackgroundResource(mFunctionalKeyBackgroundId);
         mAlphabetKeyRight.setTag(Constants.CODE_ALPHA_FROM_EMOJI);
         mAlphabetKeyRight.setOnTouchListener(this);
         mAlphabetKeyRight.setOnClickListener(this);
-        mSpacebar = findViewById(R.id.emoji_keyboard_space);
+        mSpacebar = findViewById(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_keyboard_space);
         mSpacebar.setBackgroundResource(mSpacebarBackgroundId);
         mSpacebar.setTag(Constants.CODE_SPACE);
         mSpacebar.setOnTouchListener(this);
         mSpacebar.setOnClickListener(this);
         mEmojiLayoutParams.setKeyProperties(mSpacebar);
-        mSpacebarIcon = findViewById(R.id.emoji_keyboard_space_icon);
+        mSpacebarIcon = findViewById(com.udmurtlyk.extrainputmethod.latin.R.id.emoji_keyboard_space_icon);
     }
 
     @Override
@@ -323,14 +320,14 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
             return;
         }
         final int code = (Integer) tag;
-        mKeyboardActionListener.onCodeInput(code, NOT_A_COORDINATE, NOT_A_COORDINATE,
+        mKeyboardActionListener.onCodeInput(code, Constants.NOT_A_COORDINATE, Constants.NOT_A_COORDINATE,
                 false /* isKeyRepeat */);
         mKeyboardActionListener.onReleaseKey(code, false /* withSliding */);
     }
 
     /**
      * Called from {@link EmojiPageKeyboardView} through
-     * {@link com.android.inputmethod.keyboard.emoji.EmojiPageKeyboardView.OnKeyEventListener}
+     * {@link EmojiPageKeyboardView.OnKeyEventListener}
      * interface to handle touch events from non-View-based elements such as Emoji buttons.
      */
     @Override
@@ -341,7 +338,7 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
 
     /**
      * Called from {@link EmojiPageKeyboardView} through
-     * {@link com.android.inputmethod.keyboard.emoji.EmojiPageKeyboardView.OnKeyEventListener}
+     * {@link EmojiPageKeyboardView.OnKeyEventListener}
      * interface to handle touch events from non-View-based elements such as Emoji buttons.
      */
     @Override
@@ -352,7 +349,7 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
         if (code == Constants.CODE_OUTPUT_TEXT) {
             mKeyboardActionListener.onTextInput(key.getOutputText());
         } else {
-            mKeyboardActionListener.onCodeInput(code, NOT_A_COORDINATE, NOT_A_COORDINATE,
+            mKeyboardActionListener.onCodeInput(code, Constants.NOT_A_COORDINATE, Constants.NOT_A_COORDINATE,
                     false /* isKeyRepeat */);
         }
         mKeyboardActionListener.onReleaseKey(code, false /* withSliding */);
@@ -443,8 +440,8 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
 
         public DeleteKeyOnTouchListener(Context context) {
             final Resources res = context.getResources();
-            mKeyRepeatStartTimeout = res.getInteger(R.integer.config_key_repeat_start_timeout);
-            mKeyRepeatInterval = res.getInteger(R.integer.config_key_repeat_interval);
+            mKeyRepeatStartTimeout = res.getInteger(com.udmurtlyk.extrainputmethod.latin.R.integer.config_key_repeat_start_timeout);
+            mKeyRepeatInterval = res.getInteger(com.udmurtlyk.extrainputmethod.latin.R.integer.config_key_repeat_interval);
             mTimer = new CountDownTimer(MAX_REPEAT_COUNT_TIME, mKeyRepeatInterval) {
                 @Override
                 public void onTick(long millisUntilFinished) {
@@ -509,7 +506,7 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
 
         private void handleKeyUp() {
             mKeyboardActionListener.onCodeInput(Constants.CODE_DELETE,
-                    NOT_A_COORDINATE, NOT_A_COORDINATE, false /* isKeyRepeat */);
+                    Constants.NOT_A_COORDINATE, Constants.NOT_A_COORDINATE, false /* isKeyRepeat */);
             mKeyboardActionListener.onReleaseKey(
                     Constants.CODE_DELETE, false /* withSliding */);
             ++mRepeatCount;

@@ -16,7 +16,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:latin="http://schemas.android.com/apk/res/com.android.extrainputmethod.latin"
+    xmlns:latin="http://schemas.android.com/apk/res/com.udmurtlyk.extrainputmethod.latin"
     android:title="@string/prefs_debug_mode"
     android:key="english_ime_debug_settings"
 >
@@ -46,7 +46,7 @@
         android:summary="@string/sliding_key_input_preview_summary"
         android:defaultValue="true"
         android:persistent="true" />
-    <com.android.extrainputmethod.latin.settings.SeekBarDialogPreference
+    <com.udmurtlyk.extrainputmethod.latin.settings.SeekBarDialogPreference
         android:key="pref_key_longpress_timeout"
         android:title="@string/prefs_key_longpress_timeout_settings"
         latin:minValue="@integer/config_min_longpress_timeout"
@@ -57,32 +57,32 @@
         android:title="@string/prefs_customize_key_preview_animation"
         android:defaultValue="false"
         android:persistent="true" />
-    <com.android.extrainputmethod.latin.settings.SeekBarDialogPreference
+    <com.udmurtlyk.extrainputmethod.latin.settings.SeekBarDialogPreference
         android:dependency="pref_has_custom_key_preview_animation_params"
         android:key="pref_key_preview_show_up_start_x_scale"
         android:title="@string/prefs_key_popup_show_up_start_x_scale_settings"
         latin:maxValue="100" /> <!-- percent -->
-    <com.android.extrainputmethod.latin.settings.SeekBarDialogPreference
+    <com.udmurtlyk.extrainputmethod.latin.settings.SeekBarDialogPreference
         android:dependency="pref_has_custom_key_preview_animation_params"
         android:key="pref_key_preview_show_up_start_y_scale"
         android:title="@string/prefs_key_popup_show_up_start_y_scale_settings"
         latin:maxValue="100" /> <!-- percent -->
-    <com.android.extrainputmethod.latin.settings.SeekBarDialogPreference
+    <com.udmurtlyk.extrainputmethod.latin.settings.SeekBarDialogPreference
         android:dependency="pref_has_custom_key_preview_animation_params"
         android:key="pref_key_preview_dismiss_end_x_scale"
         android:title="@string/prefs_key_popup_dismiss_end_x_scale_settings"
         latin:maxValue="100" /> <!-- percent -->
-    <com.android.extrainputmethod.latin.settings.SeekBarDialogPreference
+    <com.udmurtlyk.extrainputmethod.latin.settings.SeekBarDialogPreference
         android:dependency="pref_has_custom_key_preview_animation_params"
         android:key="pref_key_preview_dismiss_end_y_scale"
         android:title="@string/prefs_key_popup_dismiss_end_y_scale_settings"
         latin:maxValue="100" /> <!-- percent -->
-    <com.android.extrainputmethod.latin.settings.SeekBarDialogPreference
+    <com.udmurtlyk.extrainputmethod.latin.settings.SeekBarDialogPreference
         android:dependency="pref_has_custom_key_preview_animation_params"
         android:key="pref_key_preview_show_up_duration"
         android:title="@string/prefs_key_popup_show_up_duration_settings"
         latin:maxValue="100" /> <!-- milliseconds -->
-    <com.android.extrainputmethod.latin.settings.SeekBarDialogPreference
+    <com.udmurtlyk.extrainputmethod.latin.settings.SeekBarDialogPreference
         android:dependency="pref_has_custom_key_preview_animation_params"
         android:key="pref_key_preview_dismiss_duration"
         android:title="@string/prefs_key_popup_dismiss_duration_settings"

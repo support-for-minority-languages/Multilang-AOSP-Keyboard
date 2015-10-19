@@ -22,7 +22,7 @@ import com.android.inputmethod.keyboard.internal.MatrixUtils.MatrixOperationFail
 
 import java.util.Arrays;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
 
 /**
  * Utilities to smooth coordinates. Currently, we calculate 3d least squares formula by using

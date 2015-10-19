@@ -22,8 +22,8 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.R;
 import com.android.inputmethod.keyboard.internal.KeyDrawParams;
 import com.android.inputmethod.keyboard.internal.KeySpecParser;
 import com.android.inputmethod.keyboard.internal.KeyStyle;
@@ -37,11 +37,10 @@ import com.android.inputmethod.latin.utils.StringUtils;
 import java.util.Arrays;
 import java.util.Locale;
 
-import static com.android.extrainputmethod.latin.Constants.CODE_OUTPUT_TEXT;
-import static com.android.extrainputmethod.latin.Constants.CODE_SHIFT;
-import static com.android.extrainputmethod.latin.Constants.CODE_SWITCH_ALPHA_SYMBOL;
-import static com.android.extrainputmethod.latin.Constants.CODE_UNSPECIFIED;
-import static com.android.inputmethod.keyboard.internal.KeyboardIconsSet.ICON_UNDEFINED;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.CODE_OUTPUT_TEXT;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.CODE_SHIFT;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.CODE_SWITCH_ALPHA_SYMBOL;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.CODE_UNSPECIFIED;
 
 /**
  * Class for describing the position and characteristics of a single key in the keyboard.
@@ -174,7 +173,7 @@ public class Key implements Comparable<Key> {
         public static OptionalAttributes newInstance(final String outputText, final int altCode,
                 final int disabledIconId, final int visualInsetsLeft, final int visualInsetsRight) {
             if (outputText == null && altCode == CODE_UNSPECIFIED
-                    && disabledIconId == ICON_UNDEFINED && visualInsetsLeft == 0
+                    && disabledIconId == KeyboardIconsSet.ICON_UNDEFINED && visualInsetsLeft == 0
                     && visualInsetsRight == 0) {
                 return null;
             }
@@ -209,7 +208,7 @@ public class Key implements Comparable<Key> {
         mMoreKeysColumnAndFlags = 0;
         mLabel = label;
         mOptionalAttributes = OptionalAttributes.newInstance(outputText, CODE_UNSPECIFIED,
-                ICON_UNDEFINED, 0 /* visualInsetsLeft */, 0 /* visualInsetsRight */);
+                KeyboardIconsSet.ICON_UNDEFINED, 0 /* visualInsetsLeft */, 0 /* visualInsetsRight */);
         mCode = code;
         mEnabled = (code != CODE_UNSPECIFIED);
         mIconId = iconId;
@@ -758,7 +757,7 @@ public class Key implements Comparable<Key> {
 
     public Drawable getIcon(final KeyboardIconsSet iconSet, final int alpha) {
         final OptionalAttributes attrs = mOptionalAttributes;
-        final int disabledIconId = (attrs != null) ? attrs.mDisabledIconId : ICON_UNDEFINED;
+        final int disabledIconId = (attrs != null) ? attrs.mDisabledIconId : KeyboardIconsSet.ICON_UNDEFINED;
         final int iconId = mEnabled ? getIconId() : disabledIconId;
         final Drawable icon = iconSet.getIconDrawable(iconId);
         if (icon != null) {
@@ -922,7 +921,7 @@ public class Key implements Comparable<Key> {
          */
         protected Spacer(final KeyboardParams params, final int x, final int y, final int width,
                 final int height) {
-            super(null /* label */, ICON_UNDEFINED, CODE_UNSPECIFIED, null /* outputText */,
+            super(null /* label */, KeyboardIconsSet.ICON_UNDEFINED, CODE_UNSPECIFIED, null /* outputText */,
                     null /* hintLabel */, 0 /* labelFlags */, BACKGROUND_TYPE_EMPTY, x, y, width,
                     height, params.mHorizontalGap, params.mVerticalGap);
         }

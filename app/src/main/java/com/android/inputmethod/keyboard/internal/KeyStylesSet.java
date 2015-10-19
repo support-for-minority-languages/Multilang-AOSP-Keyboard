@@ -26,7 +26,6 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import com.android.extrainputmethod.latin.R;
 import com.android.inputmethod.latin.utils.XmlParseUtils;
 
 public final class KeyStylesSet {
@@ -134,16 +133,16 @@ public final class KeyStylesSet {
 
         public void readKeyAttributes(final TypedArray keyAttr) {
             // TODO: Currently not all Key attributes can be declared as style.
-            readString(keyAttr, R.styleable.Keyboard_Key_altCode);
-            readString(keyAttr, R.styleable.Keyboard_Key_keySpec);
-            readString(keyAttr, R.styleable.Keyboard_Key_keyHintLabel);
-            readStringArray(keyAttr, R.styleable.Keyboard_Key_moreKeys);
-            readStringArray(keyAttr, R.styleable.Keyboard_Key_additionalMoreKeys);
-            readFlags(keyAttr, R.styleable.Keyboard_Key_keyLabelFlags);
-            readString(keyAttr, R.styleable.Keyboard_Key_keyIconDisabled);
-            readInt(keyAttr, R.styleable.Keyboard_Key_maxMoreKeysColumn);
-            readInt(keyAttr, R.styleable.Keyboard_Key_backgroundType);
-            readFlags(keyAttr, R.styleable.Keyboard_Key_keyActionFlags);
+            readString(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_altCode);
+            readString(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keySpec);
+            readString(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyHintLabel);
+            readStringArray(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_moreKeys);
+            readStringArray(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_additionalMoreKeys);
+            readFlags(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyLabelFlags);
+            readString(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyIconDisabled);
+            readInt(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_maxMoreKeysColumn);
+            readInt(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_backgroundType);
+            readFlags(keyAttr, com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyActionFlags);
         }
 
         private void readString(final TypedArray a, final int index) {
@@ -175,7 +174,7 @@ public final class KeyStylesSet {
 
     public void parseKeyStyleAttributes(final TypedArray keyStyleAttr, final TypedArray keyAttrs,
             final XmlPullParser parser) throws XmlPullParserException {
-        final String styleName = keyStyleAttr.getString(R.styleable.Keyboard_KeyStyle_styleName);
+        final String styleName = keyStyleAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_KeyStyle_styleName);
         if (DEBUG) {
             Log.d(TAG, String.format("<%s styleName=%s />",
                     KeyboardBuilder.TAG_KEY_STYLE, styleName));
@@ -186,8 +185,8 @@ public final class KeyStylesSet {
         }
 
         String parentStyleName = EMPTY_STYLE_NAME;
-        if (keyStyleAttr.hasValue(R.styleable.Keyboard_KeyStyle_parentStyle)) {
-            parentStyleName = keyStyleAttr.getString(R.styleable.Keyboard_KeyStyle_parentStyle);
+        if (keyStyleAttr.hasValue(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_KeyStyle_parentStyle)) {
+            parentStyleName = keyStyleAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_KeyStyle_parentStyle);
             if (!mStyles.containsKey(parentStyleName)) {
                 throw new XmlParseUtils.ParseException(
                         "Unknown parentStyle " + parentStyleName, parser);
@@ -200,10 +199,10 @@ public final class KeyStylesSet {
 
     public KeyStyle getKeyStyle(final TypedArray keyAttr, final XmlPullParser parser)
             throws XmlParseUtils.ParseException {
-        if (!keyAttr.hasValue(R.styleable.Keyboard_Key_keyStyle)) {
+        if (!keyAttr.hasValue(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyStyle)) {
             return mEmptyKeyStyle;
         }
-        final String styleName = keyAttr.getString(R.styleable.Keyboard_Key_keyStyle);
+        final String styleName = keyAttr.getString(com.udmurtlyk.extrainputmethod.latin.R.styleable.Keyboard_Key_keyStyle);
         if (!mStyles.containsKey(styleName)) {
             throw new XmlParseUtils.ParseException("Unknown key style: " + styleName, parser);
         }

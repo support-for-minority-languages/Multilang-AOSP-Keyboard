@@ -361,11 +361,13 @@ mobile devices. [CHAR LIMIT=25] -->
     <!-- Ordinal number of the 3rd step in the setup wizard. [CHAR LIMIT=5] -->
     <string name="setup_step3_bullet" translatable="false">3</string>
     <!-- Title of the 3rd step in the setup wizard. [CHAR LIMIT=64] -->
-    <string name="setup_step3_title">"Congratulations, you're all set!"</string>
-    <!-- Detailed instruction of the 3rd step in the setup wizard. [CHAR LIMIT=120] -->
-    <string name="setup_step3_instruction">Now you can type in all your favorite apps with <xliff:g id="APPLICATION_NAME" example="Android Keyboard">%s</xliff:g>.</string>
-    <!-- The label of the button that triggers the screen for configuaring additional languages of the keyboard. [CHAR_LIMIT=64] -->
-    <string name="setup_step3_action">Configure additional languages</string>
+    <string name="setup_step3_title">"Select languages"</string>
+    <string name="setup_step3_instruction">Select the languages and layouts you want to use.</string>
+    <string name="setup_step3_action">Configure languages</string>
+    <string name="setup_step4_bullet" translatable="false">4</string>
+    <string name="setup_step4_title">"Congratulations, you're all set!"</string>
+    <string name="setup_step4_action">Settings</string>
+    <string name="setup_step4_instruction">Now you can type in all your favorite apps with <xliff:g id="APPLICATION_NAME" example="Android Keyboard">%s</xliff:g>.</string>
     <!-- The label of the button that finishes the setup wizard. [CHAR_LIMIT=64] -->
     <string name="setup_finish_action">Finished</string>
     <!-- Option to show setup wizard icon. [CHAR LIMIT=30]-->

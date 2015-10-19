@@ -16,7 +16,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         coreApp="true"
-        package="com.android.extrainputmethod.latin">
+        package="com.udmurtlyk.extrainputmethod.latin">
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
 
@@ -36,7 +36,7 @@
             android:supportsRtl="true"
             android:allowBackup="true">
 
-        <service android:name="com.android.extrainputmethod.latin.LatinIME"
+        <service android:name="com.udmurtlyk.extrainputmethod.latin.LatinIME"
                 android:label="@string/english_ime_name"
                 android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
@@ -45,7 +45,7 @@
             <meta-data android:name="android.view.im" android:resource="@xml/method" />
         </service>
 
-        <service android:name="com.android.extrainputmethod.latin.spellcheck.AndroidSpellCheckerService"
+        <service android:name="com.udmurtlyk.extrainputmethod.latin.spellcheck.AndroidSpellCheckerService"
                  android:label="@string/spell_checker_service_name"
                  android:permission="android.permission.BIND_TEXT_SERVICE">
             <intent-filter>
@@ -55,7 +55,7 @@
                     android:resource="@xml/spellchecker" />
         </service>
 
-        <activity android:name="com.android.extrainputmethod.latin.setup.SetupActivity"
+        <activity android:name="com.udmurtlyk.extrainputmethod.latin.setup.SetupActivity"
                 android:theme="@style/platformActivityTheme"
                 android:label="@string/english_ime_name"
                 android:icon="@drawable/ic_launcher_keyboard"
@@ -63,20 +63,22 @@
                 android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.udmurtlyk.extrainputmethod.latin.setup.SetupWizardActivity"
+                android:theme="@style/platformActivityTheme"
+                android:label="@string/english_ime_name"
+                android:icon="@drawable/ic_launcher_keyboard"
+                android:launchMode="singleTask"
+                android:clearTaskOnLaunch="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.extrainputmethod.latin.setup.SetupWizardActivity"
-                android:theme="@style/platformActivityTheme"
-                android:label="@string/english_ime_name"
-                android:clearTaskOnLaunch="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-
-        <receiver android:name="com.android.extrainputmethod.latin.SystemBroadcastReceiver">
+        <receiver android:name="com.udmurtlyk.extrainputmethod.latin.SystemBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -85,7 +87,7 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.android.extrainputmethod.latin.settings.SettingsActivity"
+        <activity android:name="com.udmurtlyk.extrainputmethod.latin.settings.SettingsActivity"
                 android:theme="@style/platformSettingsTheme"
                 android:label="@string/english_ime_settings"
                 android:uiOptions="splitActionBarWhenNarrow">
@@ -94,7 +96,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.extrainputmethod.latin.spellcheck.SpellCheckerSettingsActivity"
+        <activity android:name="com.udmurtlyk.extrainputmethod.latin.spellcheck.SpellCheckerSettingsActivity"
                   android:theme="@style/platformSettingsTheme"
                   android:label="@string/android_spell_checker_settings">
             <intent-filter>
@@ -102,26 +104,26 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.android.extrainputmethod.latin.SuggestionSpanPickedNotificationReceiver" android:enabled="true">
+        <receiver android:name="com.udmurtlyk.extrainputmethod.latin.SuggestionSpanPickedNotificationReceiver" android:enabled="true">
             <intent-filter>
                 <action android:name="android.text.style.SUGGESTION_PICKED" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.android.extrainputmethod.latin.personalization.DictionaryDecayBroadcastReciever"
+        <receiver android:name="com.udmurtlyk.extrainputmethod.latin.personalization.DictionaryDecayBroadcastReciever"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.android.extrainputmethod.latin.personalization.DICT_DECAY" />
+                <action android:name="com.udmurtlyk.extrainputmethod.latin.personalization.DICT_DECAY" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.android.extrainputmethod.latin.DictionaryPackInstallBroadcastReceiver" android:exported="false">
+        <receiver android:name="com.udmurtlyk.extrainputmethod.latin.DictionaryPackInstallBroadcastReceiver" android:exported="false">
             <intent-filter>
-                <action android:name="com.android.extrainputmethod.dictionarypack.aosp.UNKNOWN_CLIENT" />
+                <action android:name="com.udmurtlyk.extrainputmethod.dictionarypack.aosp.UNKNOWN_CLIENT" />
             </intent-filter>
         </receiver>
 
-        <provider android:name="com.android.extrainputmethod.dictionarypack.DictionaryProvider"
+        <provider android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DictionaryProvider"
                 android:grantUriPermissions="true"
                 android:exported="false"
                 android:authorities="@string/authority"
@@ -129,19 +131,19 @@
                 android:label="@string/dictionary_provider_name">
         </provider>
 
-        <service android:name="com.android.extrainputmethod.dictionarypack.DictionaryService"
+        <service android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DictionaryService"
                 android:label="@string/dictionary_service_name">
         </service>
 
-        <receiver android:name="com.android.extrainputmethod.dictionarypack.EventHandler">
+        <receiver android:name="com.udmurtlyk.extrainputmethod.dictionarypack.EventHandler">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
                 <action android:name="android.intent.action.DATE_CHANGED" />
-                <action android:name="com.android.extrainputmethod.dictionarypack.aosp.UPDATE_NOW" />
+                <action android:name="com.udmurtlyk.extrainputmethod.dictionarypack.aosp.UPDATE_NOW" />
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.android.extrainputmethod.dictionarypack.DictionarySettingsActivity"
+        <activity android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DictionarySettingsActivity"
                 android:theme="@style/platformSettingsTheme"
                 android:label="@string/dictionary_settings_title"
                 android:uiOptions="splitActionBarWhenNarrow">
@@ -150,7 +152,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.extrainputmethod.dictionarypack.DownloadOverMeteredDialog"
+        <activity android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DownloadOverMeteredDialog"
                 android:theme="@style/platformActivityTheme"
                 android:label="@string/dictionary_install_over_metered_network_prompt">
             <intent-filter>

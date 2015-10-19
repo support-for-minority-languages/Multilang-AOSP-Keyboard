@@ -25,8 +25,8 @@ import android.util.Log;
 
 import java.util.concurrent.TimeUnit;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
 public final class ImportantNoticeUtils {
     private static final String TAG = ImportantNoticeUtils.class.getSimpleName();

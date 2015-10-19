@@ -16,26 +16,26 @@
 
 package com.android.inputmethod.latin.utils;
 
-import com.android.extrainputmethod.dictionarypack.DictionarySettingsFragment;
+import com.udmurtlyk.extrainputmethod.dictionarypack.DictionarySettingsFragment;
 
 import java.util.HashSet;
 
-import com.android.extrainputmethod.latin.about.AboutPreferences;
-import com.android.extrainputmethod.latin.settings.AdvancedSettingsFragment;
-import com.android.extrainputmethod.latin.settings.AppearanceSettingsFragment;
-import com.android.extrainputmethod.latin.settings.CorrectionSettingsFragment;
-import com.android.extrainputmethod.latin.settings.CustomInputStyleSettingsFragment;
-import com.android.extrainputmethod.latin.settings.DebugSettingsFragment;
-import com.android.extrainputmethod.latin.settings.GestureSettingsFragment;
-import com.android.extrainputmethod.latin.settings.MultiLingualSettingsFragment;
-import com.android.extrainputmethod.latin.settings.PreferencesSettingsFragment;
-import com.android.extrainputmethod.latin.settings.SettingsFragment;
-import com.android.extrainputmethod.latin.settings.ThemeSettingsFragment;
-import com.android.extrainputmethod.latin.spellcheck.SpellCheckerSettingsFragment;
-import com.android.extrainputmethod.latin.userdictionary.UserDictionaryAddWordFragment;
-import com.android.extrainputmethod.latin.userdictionary.UserDictionaryList;
-import com.android.extrainputmethod.latin.userdictionary.UserDictionaryLocalePicker;
-import com.android.extrainputmethod.latin.userdictionary.UserDictionarySettings;
+import com.udmurtlyk.extrainputmethod.latin.about.AboutPreferences;
+import com.udmurtlyk.extrainputmethod.latin.settings.AdvancedSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.settings.AppearanceSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.settings.CorrectionSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.settings.CustomInputStyleSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.settings.DebugSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.settings.GestureSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.settings.MultiLingualSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.settings.PreferencesSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.settings.SettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.settings.ThemeSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.spellcheck.SpellCheckerSettingsFragment;
+import com.udmurtlyk.extrainputmethod.latin.userdictionary.UserDictionaryAddWordFragment;
+import com.udmurtlyk.extrainputmethod.latin.userdictionary.UserDictionaryList;
+import com.udmurtlyk.extrainputmethod.latin.userdictionary.UserDictionaryLocalePicker;
+import com.udmurtlyk.extrainputmethod.latin.userdictionary.UserDictionarySettings;
 
 public class FragmentUtils {
     private static final HashSet<String> sLatinImeFragments = new HashSet<>();

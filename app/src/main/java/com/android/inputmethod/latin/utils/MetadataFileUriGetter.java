@@ -18,7 +18,7 @@ package com.android.inputmethod.latin.utils;
 
 import android.content.Context;
 
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.latin.R;
 
 /**
  * Helper class to get the metadata URI and the additional ID.

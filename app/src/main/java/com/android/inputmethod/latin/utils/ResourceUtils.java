@@ -28,8 +28,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.PatternSyntaxException;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
 
 public final class ResourceUtils {
     private static final String TAG = ResourceUtils.class.getSimpleName();
@@ -189,22 +188,22 @@ public final class ResourceUtils {
     public static int getDefaultKeyboardHeight(final Resources res) {
         final DisplayMetrics dm = res.getDisplayMetrics();
         final String keyboardHeightInDp = getDeviceOverrideValue(
-                res, R.array.keyboard_heights, null /* defaultValue */);
+                res, com.udmurtlyk.extrainputmethod.latin.R.array.keyboard_heights, null /* defaultValue */);
         final float keyboardHeight;
         if (TextUtils.isEmpty(keyboardHeightInDp)) {
-            keyboardHeight = res.getDimension(R.dimen.config_default_keyboard_height);
+            keyboardHeight = res.getDimension(com.udmurtlyk.extrainputmethod.latin.R.dimen.config_default_keyboard_height);
         } else {
             keyboardHeight = Float.parseFloat(keyboardHeightInDp) * dm.density;
         }
         final float maxKeyboardHeight = res.getFraction(
-                R.fraction.config_max_keyboard_height, dm.heightPixels, dm.heightPixels);
+                com.udmurtlyk.extrainputmethod.latin.R.fraction.config_max_keyboard_height, dm.heightPixels, dm.heightPixels);
         float minKeyboardHeight = res.getFraction(
-                R.fraction.config_min_keyboard_height, dm.heightPixels, dm.heightPixels);
+                com.udmurtlyk.extrainputmethod.latin.R.fraction.config_min_keyboard_height, dm.heightPixels, dm.heightPixels);
         if (minKeyboardHeight < 0.0f) {
             // Specified fraction was negative, so it should be calculated against display
             // width.
             minKeyboardHeight = -res.getFraction(
-                    R.fraction.config_min_keyboard_height, dm.widthPixels, dm.widthPixels);
+                    com.udmurtlyk.extrainputmethod.latin.R.fraction.config_min_keyboard_height, dm.widthPixels, dm.widthPixels);
         }
         // Keyboard height will not exceed maxKeyboardHeight and will not be less than
         // minKeyboardHeight.

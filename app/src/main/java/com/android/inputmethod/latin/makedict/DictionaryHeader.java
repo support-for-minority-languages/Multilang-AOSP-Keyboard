@@ -16,16 +16,13 @@
 
 package com.android.inputmethod.latin.makedict;
 
-import com.android.inputmethod.latin.makedict.FormatSpec.DictionaryOptions;
-import com.android.inputmethod.latin.makedict.FormatSpec.FormatOptions;
-
 /**
  * Class representing dictionary header.
  */
 public final class DictionaryHeader {
     public final int mBodyOffset;
-    public final DictionaryOptions mDictionaryOptions;
-    public final FormatOptions mFormatOptions;
+    public final FormatSpec.DictionaryOptions mDictionaryOptions;
+    public final FormatSpec.FormatOptions mFormatOptions;
 
     // Note that these are corresponding definitions in native code in latinime::HeaderPolicy
     // and latinime::HeaderReadWriteUtils.
@@ -48,8 +45,8 @@ public final class DictionaryHeader {
     public static final String MAX_BIGRAM_COUNT_KEY = "MAX_BIGRAM_COUNT";
     public static final String ATTRIBUTE_VALUE_TRUE = "1";
 
-    public DictionaryHeader(final int headerSize, final DictionaryOptions dictionaryOptions,
-            final FormatOptions formatOptions) throws UnsupportedFormatException {
+    public DictionaryHeader(final int headerSize, final FormatSpec.DictionaryOptions dictionaryOptions,
+            final FormatSpec.FormatOptions formatOptions) throws UnsupportedFormatException {
         mDictionaryOptions = dictionaryOptions;
         mFormatOptions = formatOptions;
         mBodyOffset = formatOptions.mVersion < FormatSpec.VERSION4 ? headerSize : 0;

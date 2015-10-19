@@ -132,6 +132,7 @@
         <item name="colorTypedWord">@color/typed_word_color_lxx_light</item>
         <item name="colorAutoCorrect">@color/auto_correct_color_lxx_light</item>
         <item name="colorSuggested">@color/suggested_word_color_lxx_light</item>
+        <item name="colorShortcut">@color/shortcut_word_color_lxx_light</item>
         <item name="alphaObsoleted">70%</item>
     </style>
     <style

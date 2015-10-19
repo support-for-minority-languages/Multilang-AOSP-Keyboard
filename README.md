@@ -1,2 +1,20 @@
-# LatinIME_with_Russian_languages
-AOSP keyboard extented with russian native languages
+## Android LatinIME with Russian languages
+
+AOSP keyboard extented with minority languages in Russia.
+
+## Requirements
+
+* Android 4.1 and above.
+
+## Supported Languages
+
+- English
+- Russian
+- Udmurt
+- Komi
+- Tuvan
+- Kildin Sami
+
+## License
+
+Apache License, Version 2.0

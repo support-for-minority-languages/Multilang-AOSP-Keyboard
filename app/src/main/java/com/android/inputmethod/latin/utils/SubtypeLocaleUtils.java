@@ -22,15 +22,15 @@ import android.os.Build;
 import android.util.Log;
 import android.view.inputmethod.InputMethodSubtype;
 
+import com.udmurtlyk.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.R;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
 
-import com.android.extrainputmethod.latin.Constants;
-import com.android.extrainputmethod.latin.R;
-
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.KEYBOARD_LAYOUT_SET;
-import static com.android.extrainputmethod.latin.Constants.Subtype.ExtraValue.UNTRANSLATABLE_STRING_IN_SUBTYPE_NAME;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.KEYBOARD_LAYOUT_SET;
+import static com.udmurtlyk.extrainputmethod.latin.Constants.Subtype.ExtraValue.UNTRANSLATABLE_STRING_IN_SUBTYPE_NAME;
 
 public final class SubtypeLocaleUtils {
     private static final String TAG = SubtypeLocaleUtils.class.getSimpleName();

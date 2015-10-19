@@ -29,7 +29,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import com.android.extrainputmethod.latin.settings.Settings;
+import com.udmurtlyk.extrainputmethod.latin.settings.Settings;
 import com.android.inputmethod.latin.utils.JsonUtils;
 
 /**

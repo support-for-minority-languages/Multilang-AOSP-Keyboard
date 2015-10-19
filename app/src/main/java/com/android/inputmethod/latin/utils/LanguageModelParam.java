@@ -18,15 +18,15 @@ package com.android.inputmethod.latin.utils;
 
 import android.util.Log;
 
-import com.android.extrainputmethod.latin.DictionaryFacilitator;
+import com.udmurtlyk.extrainputmethod.latin.DictionaryFacilitator;
 import com.android.inputmethod.latin.PrevWordsInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import com.android.extrainputmethod.latin.Dictionary;
-import com.android.extrainputmethod.latin.settings.SpacingAndPunctuations;
+import com.udmurtlyk.extrainputmethod.latin.Dictionary;
+import com.udmurtlyk.extrainputmethod.latin.settings.SpacingAndPunctuations;
 
 // Note: this class is used as a parameter type of a native method. You should be careful when you
 // rename this class or field name. See BinaryDictionary#addMultipleDictionaryEntriesNative().

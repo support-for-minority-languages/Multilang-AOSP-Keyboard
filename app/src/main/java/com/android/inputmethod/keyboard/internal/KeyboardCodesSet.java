@@ -18,7 +18,7 @@ package com.android.inputmethod.keyboard.internal;
 
 import java.util.HashMap;
 
-import com.android.extrainputmethod.latin.Constants;
+import com.udmurtlyk.extrainputmethod.latin.Constants;
 
 public final class KeyboardCodesSet {
     public static final String PREFIX_CODE = "!code/";

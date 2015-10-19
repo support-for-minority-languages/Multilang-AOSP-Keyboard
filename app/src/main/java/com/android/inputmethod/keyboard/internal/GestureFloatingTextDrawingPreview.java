@@ -26,8 +26,7 @@ import android.text.TextUtils;
 
 import com.android.inputmethod.keyboard.PointerTracker;
 
-import com.android.extrainputmethod.latin.R;
-import com.android.extrainputmethod.latin.SuggestedWords;
+import com.udmurtlyk.extrainputmethod.latin.SuggestedWords;
 import com.android.inputmethod.latin.utils.CoordinateUtils;
 
 /**
@@ -60,19 +59,19 @@ public class GestureFloatingTextDrawingPreview extends AbstractDrawingPreview {
 
         public GesturePreviewTextParams(final TypedArray mainKeyboardViewAttr) {
             mGesturePreviewTextSize = mainKeyboardViewAttr.getDimensionPixelSize(
-                    R.styleable.MainKeyboardView_gestureFloatingPreviewTextSize, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_gestureFloatingPreviewTextSize, 0);
             mGesturePreviewTextColor = mainKeyboardViewAttr.getColor(
-                    R.styleable.MainKeyboardView_gestureFloatingPreviewTextColor, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_gestureFloatingPreviewTextColor, 0);
             mGesturePreviewTextOffset = mainKeyboardViewAttr.getDimensionPixelOffset(
-                    R.styleable.MainKeyboardView_gestureFloatingPreviewTextOffset, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_gestureFloatingPreviewTextOffset, 0);
             mGesturePreviewColor = mainKeyboardViewAttr.getColor(
-                    R.styleable.MainKeyboardView_gestureFloatingPreviewColor, 0);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_gestureFloatingPreviewColor, 0);
             mGesturePreviewHorizontalPadding = mainKeyboardViewAttr.getDimension(
-                    R.styleable.MainKeyboardView_gestureFloatingPreviewHorizontalPadding, 0.0f);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_gestureFloatingPreviewHorizontalPadding, 0.0f);
             mGesturePreviewVerticalPadding = mainKeyboardViewAttr.getDimension(
-                    R.styleable.MainKeyboardView_gestureFloatingPreviewVerticalPadding, 0.0f);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_gestureFloatingPreviewVerticalPadding, 0.0f);
             mGesturePreviewRoundRadius = mainKeyboardViewAttr.getDimension(
-                    R.styleable.MainKeyboardView_gestureFloatingPreviewRoundRadius, 0.0f);
+                    com.udmurtlyk.extrainputmethod.latin.R.styleable.MainKeyboardView_gestureFloatingPreviewRoundRadius, 0.0f);
             mDisplayWidth = mainKeyboardViewAttr.getResources().getDisplayMetrics().widthPixels;
 
             final Paint textPaint = getTextPaint();

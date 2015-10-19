@@ -28,9 +28,8 @@ import com.android.inputmethod.keyboard.KeyDetector;
 import com.android.inputmethod.keyboard.Keyboard;
 import com.android.inputmethod.keyboard.KeyboardView;
 
-import com.android.extrainputmethod.accessibility.AccessibilityUtils;
-import com.android.extrainputmethod.accessibility.KeyboardAccessibilityDelegate;
-import com.android.extrainputmethod.latin.R;
+import com.udmurtlyk.extrainputmethod.accessibility.AccessibilityUtils;
+import com.udmurtlyk.extrainputmethod.accessibility.KeyboardAccessibilityDelegate;
 
 /**
  * This is an extended {@link KeyboardView} class that hosts an emoji page keyboard.
@@ -60,7 +59,7 @@ final class EmojiPageKeyboardView extends KeyboardView implements
     private KeyboardAccessibilityDelegate<EmojiPageKeyboardView> mAccessibilityDelegate;
 
     public EmojiPageKeyboardView(final Context context, final AttributeSet attrs) {
-        this(context, attrs, R.attr.keyboardViewStyle);
+        this(context, attrs, com.udmurtlyk.extrainputmethod.latin.R.attr.keyboardViewStyle);
     }
 
     public EmojiPageKeyboardView(final Context context, final AttributeSet attrs,

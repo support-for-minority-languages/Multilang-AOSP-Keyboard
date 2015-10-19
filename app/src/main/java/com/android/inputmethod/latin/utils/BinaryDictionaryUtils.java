@@ -27,8 +27,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.android.extrainputmethod.annotations.UsedForTesting;
-import com.android.extrainputmethod.latin.personalization.PersonalizationHelper;
+import com.udmurtlyk.extrainputmethod.annotations.UsedForTesting;
+import com.udmurtlyk.extrainputmethod.latin.personalization.PersonalizationHelper;
 
 public final class BinaryDictionaryUtils {
     private static final String TAG = BinaryDictionaryUtils.class.getSimpleName();
