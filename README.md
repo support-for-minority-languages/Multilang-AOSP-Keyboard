@@ -1,4 +1,4 @@
-## Android LatinIME with Russian languages
+## Android LatinIME keyboard extented with minority languages in Russia.
 
 AOSP keyboard extented with minority languages in Russia.
 
