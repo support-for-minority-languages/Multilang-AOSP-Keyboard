@@ -13,6 +13,10 @@ android {
         udm {
             versionName "2.0-udm-beta"
         }
+        multi {
+            versionName "1.0"
+            applicationIdSuffix ".multi"
+        }
     }
 
     buildTypes {
