@@ -16,7 +16,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         coreApp="true"
-        package="com.udmurtlyk.extrainputmethod.latin">
+        package="com.udmurtlyk.extrainputmethod.latin"
+        android:versionCode="1">
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
 
