@@ -166,6 +166,7 @@
     <string name="spoken_emoji_1F232" msgid="8125716331632035820">"Ιδεογράφημα σε τετράγωνο \"απαγόρευση\""</string>
     <string name="spoken_emoji_1F233" msgid="8749401090457355028">"Ιδεογράφημα σε τετράγωνο \"κενή θέση\""</string>
     <string name="spoken_emoji_1F234" msgid="3546951604285970768">"Ιδεογράφημα σε τετράγωνο \"αποδοχή\""</string>
+    <string name="spoken_emoji_1F235">Squared ideograph full occupancy</string>
     <!-- String.format failed for translation -->
     <!-- no translation found for spoken_emoji_1F235 (5320186982841793711) -->
     <skip />

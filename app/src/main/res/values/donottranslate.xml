@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- For backward compatibility.
          See {@link SettingsValues#needsToShowVoiceInputKey(SharedPreferences,Resources)} -->
-    <string name="voice_mode_main">0</string>
+    <string name="voice_mode_main" translatable="false">0</string>
 
     <!-- Subtype locale display name exceptions.
          For each exception, there should be related string resources for display name that may have
@@ -33,7 +33,7 @@
     </string-array>
 
     <!-- Generic subtype label -->
-    <string name="subtype_generic">%s</string>
+    <string name="subtype_generic" translatable="false">%s</string>
 
     <!-- Predefined keyboard layouts for additional subtype -->
     <string-array name="predefined_layouts">
@@ -57,15 +57,15 @@
          The string resource name must be "subtype_generic_<layout name>".
          The string resource with "No language" also must be added to strings.xml and the resource
          name must be "subtype_no_language_<layout name>" -->
-    <string name="subtype_generic_qwerty">%s (QWERTY)</string>
-    <string name="subtype_generic_qwertz">%s (QWERTZ)</string>
-    <string name="subtype_generic_azerty">%s (AZERTY)</string>
-    <string name="subtype_generic_dvorak">%s (Dvorak)</string>
-    <string name="subtype_generic_colemak">%s (Colemak)</string>
-    <string name="subtype_generic_pcqwerty">%s (PC)</string>
+    <string name="subtype_generic_qwerty" translatable="false">%s (QWERTY)</string>
+    <string name="subtype_generic_qwertz" translatable="false">%s (QWERTZ)</string>
+    <string name="subtype_generic_azerty" translatable="false">%s (AZERTY)</string>
+    <string name="subtype_generic_dvorak" translatable="false">%s (Dvorak)</string>
+    <string name="subtype_generic_colemak" translatable="false">%s (Colemak)</string>
+    <string name="subtype_generic_pcqwerty" translatable="false">%s (PC)</string>
 
     <!-- Description for Bulgarian (BDS) subtype. -->
-    <string name="subtype_bulgarian_bds">%s (BDS)</string>
+    <string name="subtype_bulgarian_bds" translatable="false">%s (BDS)</string>
 
     <!-- Compatibility map from subtypeLocale:subtypeExtraValue to keyboardLayoutSet -->
     <string-array name="locale_and_extra_value_to_keyboard_layout_set_map">

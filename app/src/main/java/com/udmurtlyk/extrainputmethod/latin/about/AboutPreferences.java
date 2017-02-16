@@ -22,7 +22,7 @@ import android.app.Fragment;
  * Dummy class of AboutPreferences. Never use this.
  */
 public final class AboutPreferences extends Fragment {
-    private AboutPreferences() {
+    public AboutPreferences() {
         // Prevents this from being instantiated
     }
 }

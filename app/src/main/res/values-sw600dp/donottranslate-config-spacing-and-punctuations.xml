@@ -19,5 +19,5 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Symbols that are suggested between words -->
-    <string name="suggested_punctuations">:,;,\",(,),\',-,/,@,_</string>
+    <string name="suggested_punctuations" translatable="false">:,;,\",(,),\',-,/,@,_</string>
 </resources>

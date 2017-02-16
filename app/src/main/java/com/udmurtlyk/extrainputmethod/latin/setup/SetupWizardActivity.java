@@ -16,33 +16,45 @@
 
 package com.udmurtlyk.extrainputmethod.latin.setup;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.android.inputmethod.latin.utils.LeakGuardHandlerWrapper;
+import com.android.inputmethod.latin.utils.UncachedInputMethodManagerUtils;
 import com.udmurtlyk.extrainputmethod.compat.TextViewCompatUtils;
 import com.udmurtlyk.extrainputmethod.compat.ViewCompatUtils;
 import com.udmurtlyk.extrainputmethod.latin.R;
 import com.udmurtlyk.extrainputmethod.latin.settings.SettingsActivity;
-import com.android.inputmethod.latin.utils.LeakGuardHandlerWrapper;
-import com.android.inputmethod.latin.utils.UncachedInputMethodManagerUtils;
 
 import java.util.ArrayList;
 
+import permissions.dispatcher.NeedsPermission;
+import permissions.dispatcher.OnNeverAskAgain;
+import permissions.dispatcher.PermissionUtils;
+import permissions.dispatcher.RuntimePermissions;
+
 // TODO: Use Fragment to implement welcome screen and setup steps.
+@RuntimePermissions
 public final class SetupWizardActivity extends Activity implements View.OnClickListener {
     static final String TAG = SetupWizardActivity.class.getSimpleName();
 
@@ -378,6 +390,13 @@ public final class SetupWizardActivity extends Activity implements View.OnClickL
     }
 
     @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        // NOTE: delegate the permission handling to generated method
+        SetupWizardActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
+    }
+
+    @Override
     public void onBackPressed() {
         if (mStepNumber == STEP_1) {
             mStepNumber = STEP_WELCOME;
@@ -389,7 +408,7 @@ public final class SetupWizardActivity extends Activity implements View.OnClickL
 
     void hideWelcomeVideoAndShowWelcomeImage() {
         mWelcomeVideoView.setVisibility(View.GONE);
-        mWelcomeImageView.setImageResource(R.raw.setup_welcome_image);
+        mWelcomeImageView.setImageResource(R.drawable.setup_welcome_image);
         mWelcomeImageView.setVisibility(View.VISIBLE);
     }
 
@@ -420,16 +439,27 @@ public final class SetupWizardActivity extends Activity implements View.OnClickL
         }
     }
 
+
     private void updateSetupStepView() {
         mSetupWizard.setVisibility(View.VISIBLE);
         final boolean welcomeScreen = (mStepNumber == STEP_WELCOME);
         mWelcomeScreen.setVisibility(welcomeScreen ? View.VISIBLE : View.GONE);
         mSetupScreen.setVisibility(welcomeScreen ? View.GONE : View.VISIBLE);
         if (welcomeScreen) {
-            if (ENABLE_WELCOME_VIDEO) {
-                showAndStartWelcomeVideo();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
+                    !PermissionUtils.hasSelfPermissions(this, Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("Уважаемый пользователь! Для того чтобы начать пользоваться приложением необходимо дать доступ к контактам (при наборе текста будут предлагаться имена из вашего списка контактов) и доступ к файлам (для того чтобы сохранять пользовательский словарь).")
+                        .setCancelable(false)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                SetupWizardActivityPermissionsDispatcher.showFirstStepWithCheck(SetupWizardActivity.this);
+                            }
+                        })
+                        .show();
             } else {
-                hideWelcomeVideoAndShowWelcomeImage();
+                showFirstStep();
             }
             return;
         }
@@ -438,6 +468,25 @@ public final class SetupWizardActivity extends Activity implements View.OnClickL
         mSetupStepGroup.enableStep(mStepNumber, isStepActionAlreadyDone);
         mActionNext.setVisibility(isStepActionAlreadyDone ? View.VISIBLE : View.GONE);
         mActionFinish.setVisibility((mStepNumber == STEP_4) ? View.VISIBLE : View.GONE);
+    }
+
+    @NeedsPermission({Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_EXTERNAL_STORAGE})
+    void showFirstStep() {
+        if (ENABLE_WELCOME_VIDEO) {
+            showAndStartWelcomeVideo();
+        } else {
+            hideWelcomeVideoAndShowWelcomeImage();
+        }
+    }
+
+    @OnNeverAskAgain(Manifest.permission.READ_CONTACTS)
+    void showNeverAskForContacts() {
+        Toast.makeText(this, "Доступ к контактам не разрешен, для влкючения доступа перейдите в настройки приложения", Toast.LENGTH_SHORT).show();
+    }
+
+    @OnNeverAskAgain(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    void showNeverAskForStorage() {
+        Toast.makeText(this, "Доступ к файлам не разрешен, для влкючения доступа перейдите в настройки приложения", Toast.LENGTH_SHORT).show();
     }
 
     static final class SetupStep implements View.OnClickListener {

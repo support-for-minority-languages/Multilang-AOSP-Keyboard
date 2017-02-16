@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="keyboard_name_udm">Удмуртский</string>
-    <string name="keyboard_name_udm_4row">Удмуртский (4 ряда)</string>
-    <string name="keyboard_name_kv">Коми</string>
-    <string name="keyboard_name_chm">Марийский</string>
-    <string name="keyboard_name_tyv">Тувинский</string>
-    <string name="keyboard_name_smi">Кильдинский саамский</string>
+    <string name="keyboard_name_udm" translatable="false">Удмуртский</string>
+    <string name="keyboard_name_udm_4row" translatable="false">Удмуртский (4 ряда)</string>
+    <string name="keyboard_name_kv" translatable="false">Коми</string>
+    <string name="keyboard_name_chm" translatable="false">Марийский</string>
+    <string name="keyboard_name_tyv" translatable="false">Тувинский</string>
+    <string name="keyboard_name_smi" translatable="false">Кильдинский саамский</string>
 </resources>
