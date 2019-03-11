@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2012 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,8 +14,9 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        coreApp="true"
-        package="com.udmurtlyk.extrainputmethod.latin">
+    xmlns:tools="http://schemas.android.com/tools"
+    coreApp="true"
+    package="com.udmurtlyk.extrainputmethod.latin">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
@@ -29,47 +29,56 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
 
-    <application android:label="@string/english_ime_name"
-            android:icon="@drawable/ic_launcher_keyboard"
-            android:supportsRtl="true"
-            android:allowBackup="true">
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_keyboard"
+        android:label="@string/english_ime_name"
+        android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning">
 
-        <service android:name="com.udmurtlyk.extrainputmethod.latin.LatinIME"
-                android:label="@string/english_ime_name"
-                android:permission="android.permission.BIND_INPUT_METHOD">
+        <service
+            android:name="com.udmurtlyk.extrainputmethod.latin.LatinIME"
+            android:label="@string/english_ime_name"
+            android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
-            <meta-data android:name="android.view.im" android:resource="@xml/method" />
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
         </service>
 
-        <service android:name="com.udmurtlyk.extrainputmethod.latin.spellcheck.AndroidSpellCheckerService"
-                 android:label="@string/spell_checker_service_name"
-                 android:permission="android.permission.BIND_TEXT_SERVICE">
+        <service
+            android:name="com.udmurtlyk.extrainputmethod.latin.spellcheck.AndroidSpellCheckerService"
+            android:label="@string/spell_checker_service_name"
+            android:permission="android.permission.BIND_TEXT_SERVICE">
             <intent-filter>
                 <action android:name="android.service.textservice.SpellCheckerService" />
             </intent-filter>
-            <meta-data android:name="android.view.textservice.scs"
-                    android:resource="@xml/spellchecker" />
+            <meta-data
+                android:name="android.view.textservice.scs"
+                android:resource="@xml/spellchecker" />
         </service>
 
-        <activity android:name="com.udmurtlyk.extrainputmethod.latin.setup.SetupActivity"
-                android:theme="@style/platformActivityTheme"
-                android:label="@string/english_ime_name"
-                android:icon="@drawable/ic_launcher_keyboard"
-                android:launchMode="singleTask"
-                android:noHistory="true">
+        <activity
+            android:name="com.udmurtlyk.extrainputmethod.latin.setup.SetupActivity"
+            android:icon="@drawable/ic_launcher_keyboard"
+            android:label="@string/english_ime_name"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/platformActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
-        <activity android:name="com.udmurtlyk.extrainputmethod.latin.setup.SetupWizardActivity"
-                android:theme="@style/platformActivityTheme"
-                android:label="@string/english_ime_name"
-                android:icon="@drawable/ic_launcher_keyboard"
-                android:launchMode="singleTask"
-                android:clearTaskOnLaunch="true">
+        <activity
+            android:name="com.udmurtlyk.extrainputmethod.latin.setup.SetupWizardActivity"
+            android:clearTaskOnLaunch="true"
+            android:icon="@drawable/ic_launcher_keyboard"
+            android:label="@string/english_ime_name"
+            android:launchMode="singleTask"
+            android:theme="@style/platformActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -85,53 +94,60 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.udmurtlyk.extrainputmethod.latin.settings.SettingsActivity"
-                android:theme="@style/platformSettingsTheme"
-                android:label="@string/english_ime_settings"
-                android:uiOptions="splitActionBarWhenNarrow">
+        <activity
+            android:name="com.udmurtlyk.extrainputmethod.latin.settings.SettingsActivity"
+            android:label="@string/english_ime_settings"
+            android:theme="@style/platformSettingsTheme"
+            android:uiOptions="splitActionBarWhenNarrow">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
-        <activity android:name="com.udmurtlyk.extrainputmethod.latin.spellcheck.SpellCheckerSettingsActivity"
-                  android:theme="@style/platformSettingsTheme"
-                  android:label="@string/android_spell_checker_settings">
+        <activity
+            android:name="com.udmurtlyk.extrainputmethod.latin.spellcheck.SpellCheckerSettingsActivity"
+            android:label="@string/android_spell_checker_settings"
+            android:theme="@style/platformSettingsTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.udmurtlyk.extrainputmethod.latin.SuggestionSpanPickedNotificationReceiver" android:enabled="true">
+        <receiver
+            android:name="com.udmurtlyk.extrainputmethod.latin.SuggestionSpanPickedNotificationReceiver"
+            android:enabled="true">
             <intent-filter>
                 <action android:name="android.text.style.SUGGESTION_PICKED" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.udmurtlyk.extrainputmethod.latin.personalization.DictionaryDecayBroadcastReciever"
+        <receiver
+            android:name="com.udmurtlyk.extrainputmethod.latin.personalization.DictionaryDecayBroadcastReciever"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.udmurtlyk.extrainputmethod.latin.personalization.DICT_DECAY" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.udmurtlyk.extrainputmethod.latin.DictionaryPackInstallBroadcastReceiver" android:exported="false">
+        <receiver
+            android:name="com.udmurtlyk.extrainputmethod.latin.DictionaryPackInstallBroadcastReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.udmurtlyk.extrainputmethod.dictionarypack.aosp.UNKNOWN_CLIENT" />
             </intent-filter>
         </receiver>
 
-        <provider android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DictionaryProvider"
-                android:grantUriPermissions="true"
-                android:exported="false"
-                android:authorities="@string/authority"
-                android:multiprocess="false"
-                android:label="@string/dictionary_provider_name">
-        </provider>
+        <provider
+            android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DictionaryProvider"
+            android:authorities="@string/authority"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:label="@string/dictionary_provider_name"
+            android:multiprocess="false" />
 
-        <service android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DictionaryService"
-                android:label="@string/dictionary_service_name">
-        </service>
+        <service
+            android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DictionaryService"
+            android:label="@string/dictionary_service_name" />
 
         <receiver android:name="com.udmurtlyk.extrainputmethod.dictionarypack.EventHandler">
             <intent-filter>
@@ -141,20 +157,22 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DictionarySettingsActivity"
-                android:theme="@style/platformSettingsTheme"
-                android:label="@string/dictionary_settings_title"
-                android:uiOptions="splitActionBarWhenNarrow">
+        <activity
+            android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DictionarySettingsActivity"
+            android:label="@string/dictionary_settings_title"
+            android:theme="@style/platformSettingsTheme"
+            android:uiOptions="splitActionBarWhenNarrow">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
-        <activity android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DownloadOverMeteredDialog"
-                android:theme="@style/platformActivityTheme"
-                android:label="@string/dictionary_install_over_metered_network_prompt">
+        <activity
+            android:name="com.udmurtlyk.extrainputmethod.dictionarypack.DownloadOverMeteredDialog"
+            android:label="@string/dictionary_install_over_metered_network_prompt"
+            android:theme="@style/platformActivityTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
     </application>

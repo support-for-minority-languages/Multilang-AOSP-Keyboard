@@ -35,6 +35,7 @@ import java.util.concurrent.TimeUnit;
 
 import com.udmurtlyk.extrainputmethod.latin.AssetFileAddress;
 import com.udmurtlyk.extrainputmethod.latin.BinaryDictionaryGetter;
+import com.udmurtlyk.extrainputmethod.latin.BuildConfig;
 import com.udmurtlyk.extrainputmethod.latin.Constants;
 import com.udmurtlyk.extrainputmethod.latin.R;
 import com.udmurtlyk.extrainputmethod.latin.settings.SpacingAndPunctuations;
@@ -44,7 +45,7 @@ import com.udmurtlyk.extrainputmethod.latin.settings.SpacingAndPunctuations;
  */
 public class DictionaryInfoUtils {
     private static final String TAG = DictionaryInfoUtils.class.getSimpleName();
-    private static final String RESOURCE_PACKAGE_NAME = R.class.getPackage().getName();
+    private static final String RESOURCE_PACKAGE_NAME = BuildConfig.APPLICATION_ID;
     private static final String DEFAULT_MAIN_DICT = "main";
     private static final String MAIN_DICT_PREFIX = "main_";
     // 6 digits - unicode is limited to 21 bits
