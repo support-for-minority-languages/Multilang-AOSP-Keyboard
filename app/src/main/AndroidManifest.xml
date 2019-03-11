@@ -19,8 +19,6 @@
         package="com.udmurtlyk.extrainputmethod.latin"
         android:versionCode="1">
 
-    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />

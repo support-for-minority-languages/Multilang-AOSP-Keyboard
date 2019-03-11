@@ -1,19 +1,20 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
-
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.udmurtlyk.extrainputmethod.latin"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 27
     }
-
+    flavorDimensions "lang"
     productFlavors {
         udm {
-            versionName "2.0-udm-beta"
+            dimension "lang"
+            versionCode 3
+            versionName "2.0.1-beta"
         }
         multi {
+            versionCode 2
             versionName "1.0"
             applicationIdSuffix ".multi"
         }
@@ -29,10 +30,12 @@ android {
     aaptOptions {
         noCompress ".dict"
     }
-
     dependencies {
-        compile 'com.android.support:support-v4:23.1.1'
-        compile fileTree(dir: 'libs', include: '*.jar')
+        implementation 'com.android.support:support-v4:27.1.1'
+        implementation fileTree(dir: 'libs', include: '*.jar')
+
+        implementation 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+        annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
     }
 }
 

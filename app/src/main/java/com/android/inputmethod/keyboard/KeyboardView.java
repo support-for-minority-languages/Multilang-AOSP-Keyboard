@@ -29,6 +29,7 @@ import android.graphics.Region;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.NinePatchDrawable;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
@@ -290,7 +291,12 @@ public class KeyboardView extends View {
             }
         }
         if (!isHardwareAccelerated) {
-            canvas.clipRegion(mClipRegion, Region.Op.REPLACE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                canvas.clipOutPath(mClipRegion.getBoundaryPath());
+            }
+//            else {
+//                canvas.clipRegion(mClipRegion, Region.Op.REPLACE);
+//            }
             // Draw keyboard background.
             canvas.drawColor(Color.BLACK, PorterDuff.Mode.CLEAR);
             final Drawable background = getBackground();
